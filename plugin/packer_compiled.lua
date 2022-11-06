@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["darkplus.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",
+    url = "https://github.com/martinsione/darkplus.nvim"
+  },
   ["omnisharp-vim"] = {
     loaded = true,
     path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\omnisharp-vim",
@@ -98,6 +103,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline",
     url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-code-dark"] = {
+    loaded = true,
+    path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-code-dark",
+    url = "https://github.com/tomasiser/vim-code-dark"
   }
 }
 

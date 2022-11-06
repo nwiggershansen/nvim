@@ -1,6 +1,9 @@
-vim.g.tokyonight_transparent_sidebar = true
-vim.g.tokyonight_transparent = true
+-- vim.g.tokyonight_transparent_sidebar = true
+-- vim.g.tokyonight_transparent = true
 vim.opt.background = "dark"
 
-vim.cmd("colorscheme tokyonight")
+vim.g.codedark_transparent = true
+vim.g.airline_theme = 'codedark'
+
+vim.cmd("colorscheme darkplus")
 

@@ -6,6 +6,9 @@ return require('packer').startup(function(use)
     use 'vim-airline/vim-airline'
     use 'neoclide/coc.nvim'
     use 'OmniSharp/omnisharp-vim'
+    use 'tomasiser/vim-code-dark'
+    use 'martinsione/darkplus.nvim'
 end)
+
 
 
