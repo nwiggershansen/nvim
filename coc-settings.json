@@ -1,0 +1,4 @@
+{
+    "coc.source.Omnisharp.enable": true,
+    "coc.source.Omnisharp.triggerCharacters": "."
+}

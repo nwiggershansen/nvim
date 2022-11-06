@@ -74,6 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
+  ["omnisharp-vim"] = {
+    loaded = true,
+    path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\omnisharp-vim",
+    url = "https://github.com/OmniSharp/omnisharp-vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
@@ -83,6 +93,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
   }
 }
 
