@@ -8,6 +8,9 @@ return require('packer').startup(function(use)
     use 'OmniSharp/omnisharp-vim'
     use 'tomasiser/vim-code-dark'
     use 'martinsione/darkplus.nvim'
+    use 'nvim-telescope/telescope.nvim'
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-treesitter/nvim-treesitter'
 end)
 
 

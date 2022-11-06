@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",
     url = "https://github.com/martinsione/darkplus.nvim"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["omnisharp-vim"] = {
     loaded = true,
     path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\omnisharp-vim",
@@ -93,6 +98,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Kaptajnen\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
