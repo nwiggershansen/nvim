@@ -6,3 +6,6 @@ require("_telescope")
 
 vim.opt.wildignore:append { '*.meta' }
 
+vim.g.ale_linters = {
+    cs = { "OmniSharp" }
+}

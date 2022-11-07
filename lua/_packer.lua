@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-treesitter/nvim-treesitter'
+    use 'dense-analysis/ale'
 end)
 
 
