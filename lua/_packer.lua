@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'folke/tokyonight.nvim'
     use 'vim-airline/vim-airline'
+    use 'vim-airline/vim-airline-themes'
     use 'neoclide/coc.nvim'
     use 'OmniSharp/omnisharp-vim'
     use 'tomasiser/vim-code-dark'
@@ -12,6 +13,7 @@ return require('packer').startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'dense-analysis/ale'
+    use 'tpope/vim-fugitive'
 end)
 
 
