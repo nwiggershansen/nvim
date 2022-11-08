@@ -15,3 +15,5 @@ nnoremap("<C-d>", "<C-d>zz")
 
 inoremap('<CR>', 'pumvisible() ?  coc#_select_confirm() : "<CR>"', EXPR_NOERR)
 
+nnoremap('<S-Tab>', '<<')
+
