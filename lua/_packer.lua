@@ -14,6 +14,8 @@ return require('packer').startup(function(use)
     use 'dense-analysis/ale'
     use 'tpope/vim-fugitive'
     use 'neovim/nvim-lspconfig'
+    use 'sumneko/lua-language-server'
+    use 'williamboman/mason.nvim'
 end)
 
 

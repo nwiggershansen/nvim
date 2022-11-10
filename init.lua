@@ -2,6 +2,7 @@ require("set")
 require("_packer")
 require("remap")
 require("_telescope")
+require("_mason")
 
 vim.opt.wildignore:append { '*.meta' }
 
