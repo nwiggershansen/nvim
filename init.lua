@@ -7,7 +7,7 @@ require("_mason")
 vim.opt.wildignore:append { '*.meta' }
 
 vim.g.ale_linters = {
-    cs = { "OmniSharp" }
+  cs = { "OmniSharp" }
 }
 
 vim.g.ale_sign_error = '•'
@@ -17,4 +17,3 @@ vim.g.ale_sign_style_error = '·'
 vim.g.ale_sign_stylle_warning = '·'
 
 vim.g.airline_powerline_fonts = 1
-

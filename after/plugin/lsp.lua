@@ -68,3 +68,6 @@ require('lspconfig').sumneko_lua.setup(config({
 }, nil))
 
 require('lspconfig').tsserver.setup(config({}, nil))
+
+require('lspconfig').jsonls.setup(config({}, nil))
+

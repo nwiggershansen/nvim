@@ -13,3 +13,6 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.g.mapleader = " "
+
+vim.diagnostic.config({ virtual_text = false, signs = true, float = { border = "single" }, })
+
