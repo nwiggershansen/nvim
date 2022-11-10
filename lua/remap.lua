@@ -14,6 +14,12 @@ nnoremap("<C-u>", "<C-u>zz")
 nnoremap("<C-d>", "<C-d>zz")
 
 inoremap('<CR>', 'pumvisible() ?  coc#_select_confirm() : "<CR>"', EXPR_NOERR)
+inoremap('{', '{<CR>}<Esc>ka<CR>')
+inoremap('[', '[]<Esc>ha')
+inoremap('(', '()<Esc>ha')
+inoremap('"', '""<Esc>ha')
+inoremap('\'', '\'\'<Esc>ha')
+inoremap('`', '``<Esc>ha')
 
 nnoremap('<S-Tab>', '<<')
 
