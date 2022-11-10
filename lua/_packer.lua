@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
     use 'neovim/nvim-lspconfig'
     use 'williamboman/mason.nvim'
+    use 'OmniSharp/omnisharp-vim'
 end)
 
 

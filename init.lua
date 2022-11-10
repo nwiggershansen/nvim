@@ -17,3 +17,4 @@ vim.g.ale_sign_style_error = '·'
 vim.g.ale_sign_stylle_warning = '·'
 
 vim.g.airline_powerline_fonts = 1
+

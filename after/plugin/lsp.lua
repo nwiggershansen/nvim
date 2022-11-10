@@ -1,7 +1,7 @@
 local nnoremap = require('keymap').nnoremap
-
+local omnisharp_config = require("omnisharp_config")
 local mason_path = "C:/Users/Kaptajnen/AppData/Local/nvim-data/mason/packages/"
-local omnisharp_path = mason_path .. "omnisharp/Omnisharp.exe"
+local omnisharp_path = mason_path .. "omnisharp/OmniSharp.exe"
 local sumneko_path = mason_path .. "lua-language-server/extension/server/bin/lua-language-server.exe"
 
 local base_attach = function()
@@ -17,17 +17,25 @@ local function config(_config, func)
     return vim.tbl_deep_extend("force", {
         on_attach = function()
             base_attach()
-            if(type(func) == 'function') then
+            if (type(func) == 'function') then
                 func()
             end
         end
     }, _config or {})
 end
 
+local omnisharp_cmd = { omnisharp_path }
+table.insert(omnisharp_cmd, '--languageserver')
+
+for _, v in pairs(omnisharp_config) do
+    table.insert(omnisharp_cmd, v)
+end
+
+
 require('lspconfig').omnisharp.setup(config({
-        cmd = { omnisharp_path }
+    cmd = omnisharp_cmd
 }, function()
-    nnoremap("<C-f>", ':OmniSharpCodeFormat<CR>')
+    nnoremap("<C-f>", ':OmniSharpCodeFormat<CR>', { silent=true })
 end))
 
 require('lspconfig').sumneko_lua.setup(config({
@@ -35,7 +43,7 @@ require('lspconfig').sumneko_lua.setup(config({
     settings = {
         Lua = {
             diagnostics = {
-                 globals = { "vim" }
+                globals = { "vim" }
             }
         }
     }
