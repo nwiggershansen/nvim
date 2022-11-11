@@ -9,7 +9,9 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline-themes'
   use 'vim-airline/vim-airline'
   use 'rockyzhang24/arctic.nvim'
-  use 'KaptajnenGaming/themelas.nvim'
+  --  use 'KaptajnenGaming/themelas.nvim'
+  use 'H:/workspace/themelas'
+  use 'martinsione/darkplus.nvim'
 
   -- All of it
   use 'nvim-telescope/telescope.nvim'
