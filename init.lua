@@ -19,5 +19,6 @@ vim.g.ale_sign_stylle_warning = '·'
 vim.g.airline_powerline_fonts = 1
 
 vim.g.OmniSharp_highlight_groups = {
-  EnumMemberName = 'EnumMemberField'
+  EnumMemberName = 'EnumMemberField',
+  Operator = "OperatorPunctuation"
 }
