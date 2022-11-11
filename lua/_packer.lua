@@ -8,6 +8,8 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'vim-airline/vim-airline-themes'
   use 'vim-airline/vim-airline'
+  use 'rockyzhang24/arctic.nvim'
+  use 'KaptajnenGaming/themelas.nvim'
 
   -- All of it
   use 'nvim-telescope/telescope.nvim'
