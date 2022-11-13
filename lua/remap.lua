@@ -1,6 +1,7 @@
 local builtin = require('telescope.builtin')
 local nnoremap = require("keymap").nnoremap
 local inoremap = require("keymap").inoremap
+local xnoremap = require("keymap").xnoremap
 local EXPR_NOERR = {expr = true, silent = true, nowait = true }
 
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
@@ -22,4 +23,10 @@ inoremap('\'', '\'\'<Esc>ha')
 inoremap('`', '``<Esc>ha')
 
 nnoremap('<S-Tab>', '<<')
+
+xnoremap("<leader>p", "\"_dP")
+
+-- Deletes everything between quotes and goes directly into insert mode
+nnoremap('di\"', 'di\"i')
+nnoremap('di\'', 'di\'i')
 
