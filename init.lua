@@ -22,3 +22,5 @@ vim.g.OmniSharp_highlight_groups = {
   EnumMemberName = 'EnumMemberField',
   Operator = "OperatorPunctuation"
 }
+
+vim.g.netrw_list_hide = '.*\\meta$'
