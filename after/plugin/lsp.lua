@@ -29,6 +29,7 @@ local base_attach = function()
   nnoremap("]d", function() vim.diagnostic.goto_prev() end)
   nnoremap("<C-m>", function() vim.lsp.buf.code_action() end)
   nnoremap("<C-f>", function() vim.lsp.buf.format { async = true } end)
+  nnoremap('<C-k>', function() vim.lsp.buf.signature_help() end)
 end
 
 local function config(_config, func)
