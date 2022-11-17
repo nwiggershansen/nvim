@@ -34,7 +34,7 @@ nnoremap('di\"', 'di\"i')
 nnoremap('di\'', 'di\'i')
 
 -- Closes current file & nvim-tree
-nnoremap('qq', ':q<CR>:q<CR>')
+nnoremap('qq', '<cmd>q<CR><cmd>q<CR>')
 
 -- Navigate between splits
 nnoremap('<C-h>', '<C-W>h')
