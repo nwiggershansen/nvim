@@ -20,7 +20,8 @@ vim.g.airline_powerline_fonts = 1
 
 vim.g.OmniSharp_highlight_groups = {
   EnumMemberName = 'EnumMemberField',
-  Operator = "OperatorPunctuation"
+  Operator = "OperatorPunctuation",
+  Keyword = "CsKeyword"
 }
 
 vim.g.netrw_list_hide = '.*\\meta$'
