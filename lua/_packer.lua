@@ -45,5 +45,8 @@ return require('packer').startup(function(use)
   use 'OmniSharp/omnisharp-vim'
 
   -- Folder structure
-  use {   'nvim-tree/nvim-tree.lua',   requires = {     'nvim-tree/nvim-web-devicons',  } }
+  use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons', } }
+
+  -- Git diff view
+  use { 'sindrets/diffview.nvim' }
 end)
