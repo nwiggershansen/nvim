@@ -32,3 +32,6 @@ xnoremap("<leader>p", "\"_dP")
 -- Deletes everything between quotes and goes directly into insert mode
 nnoremap('di\"', 'di\"i')
 nnoremap('di\'', 'di\'i')
+
+-- Closes current file & nvim-tree
+nnoremap('qq', ':q<CR>:q<CR>')
