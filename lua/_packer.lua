@@ -43,4 +43,7 @@ return require('packer').startup(function(use)
 
   -- C# specific
   use 'OmniSharp/omnisharp-vim'
+
+  -- Folder structure
+  use {   'nvim-tree/nvim-tree.lua',   requires = {     'nvim-tree/nvim-web-devicons',  } }
 end)

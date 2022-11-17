@@ -24,4 +24,14 @@ vim.g.OmniSharp_highlight_groups = {
   Keyword = "CsKeyword"
 }
 
-vim.g.netrw_list_hide = '.*\\meta$'
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.opt.termguicolors = true
+
+require('nvim-tree').setup({
+  filters = {
+    custom = { ".meta$" }
+  }
+})
+
