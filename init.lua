@@ -22,7 +22,8 @@ vim.g.airline_powerline_fonts = 1
 vim.g.OmniSharp_highlight_groups = {
   EnumMemberName = 'EnumMemberField',
   Operator = "OperatorPunctuation",
-  Keyword = "CsKeyword"
+  Keyword = "CsKeyword",
+  ControlKeyword = "CsControlKeyword"
 }
 
 vim.g.loaded_netrw = 1
@@ -35,4 +36,3 @@ require('nvim-tree').setup({
     custom = { ".meta$" }
   }
 })
-
