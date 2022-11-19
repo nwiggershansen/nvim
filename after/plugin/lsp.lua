@@ -15,7 +15,9 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['C-Space'] = cmp.mapping.complete()
+    ['C-Space'] = cmp.mapping.complete(),
+    ['<C-k>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-j>'] = cmp.mapping.scroll_docs(4),
   }),
   formatting = {
     format = lspkind.cmp_format({
