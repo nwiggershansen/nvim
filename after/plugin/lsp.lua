@@ -5,6 +5,7 @@ local omnisharp_path = mason_path .. "omnisharp/OmniSharp.exe"
 local sumneko_path = mason_path .. "lua-language-server/extension/server/bin/lua-language-server.exe"
 
 local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 cmp.setup({
   snippet = {
@@ -16,6 +17,13 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['C-Space'] = cmp.mapping.complete()
   }),
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = "symbol",
+      maxwidth = 50,
+      ellipsis_char = "...",
+    })
+  },
   sources = cmp.config.sources({
     { name = 'luasnip' },
     { name = 'nvim_lsp' }
@@ -72,3 +80,4 @@ require('lspconfig').tsserver.setup(config({}, nil))
 
 require('lspconfig').jsonls.setup(config({}, nil))
 
+require('symbols-outline').setup()

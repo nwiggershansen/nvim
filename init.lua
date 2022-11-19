@@ -4,6 +4,8 @@ require("remap")
 require("_telescope")
 require("_mason")
 require("diffview")
+require('treesitter-context').setup()
+require('symbols-outline').setup()
 
 vim.opt.wildignore:append { '*.meta' }
 
