@@ -33,6 +33,6 @@ vim.opt.termguicolors = true
 
 require('nvim-tree').setup({
   filters = {
-    custom = { ".meta$" }
+    custom = { ".meta$", ".unity$" }
   }
 })

@@ -1,3 +1,3 @@
 require("telescope").setup {
-    defaults = { file_ignore_patterns = { '.meta' } }
+  defaults = { file_ignore_patterns = { '.meta', '.unity' } }
 }
