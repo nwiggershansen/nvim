@@ -28,13 +28,13 @@ vim.g.OmniSharp_highlight_groups = {
   ControlKeyword = "CsControlKeyword"
 }
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
 
-require('nvim-tree').setup({
-  filters = {
-    custom = { ".meta$", ".unity$" }
-  }
-})
+-- require('nvim-tree').setup({
+--  filters = {
+--    custom = { ".meta$", ".unity$" }
+--  }
+-- })
