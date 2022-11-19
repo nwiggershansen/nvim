@@ -30,7 +30,7 @@ vim.g.OmniSharp_highlight_groups = {
 
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
-
+vim.g.netrw_list_hide = '.*\\.meta$,.*\\.unity'
 vim.opt.termguicolors = true
 
 -- require('nvim-tree').setup({
