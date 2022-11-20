@@ -3,6 +3,7 @@ require("_packer")
 require("remap")
 require("_telescope")
 require("_mason")
+require("user.omnisharp")
 require("diffview")
 require('treesitter-context').setup()
 require('symbols-outline').setup()
@@ -20,13 +21,6 @@ vim.g.ale_sign_style_error = '·'
 vim.g.ale_sign_stylle_warning = '·'
 
 vim.g.airline_powerline_fonts = 1
-
-vim.g.OmniSharp_highlight_groups = {
-  EnumMemberName = 'EnumMemberField',
-  Operator = "OperatorPunctuation",
-  Keyword = "CsKeyword",
-  ControlKeyword = "CsControlKeyword"
-}
 
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
