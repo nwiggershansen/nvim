@@ -13,7 +13,9 @@ return require('packer').startup(function(use)
   -- use 'H:/workspace/themelas'
 
   -- Status line
-  use('nvim-lualine/lualine.nvim')
+  use('vim-airline/vim-airline-themes')
+  use('vim-airline/vim-airline')
+  -- use('nvim-lualine/lualine.nvim')
 
   -- All of it
   use('neovim/nvim-lspconfig')
