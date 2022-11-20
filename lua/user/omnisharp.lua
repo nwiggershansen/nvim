@@ -4,5 +4,7 @@ vim.g.OmniSharp_highlight_groups = {
   Keyword = "Statement",
   ControlKeyword = "markdownCode",
   LocalName = "@variable",
-  FieldName = "@variable"
+  FieldName = "@variable",
+  ParameterName = "@parameter",
+  PropertyName = "@property"
 }
