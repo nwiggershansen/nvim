@@ -1,4 +1,5 @@
 vim.g.OmniSharp_highlight_groups = {
   EnumMemberName = "Operator",
-  NamespaceName = "Type"
+  NamespaceName = "Type",
+  Keyword = "Statement"
 }
