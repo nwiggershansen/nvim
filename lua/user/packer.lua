@@ -5,14 +5,15 @@ return require('packer').startup(function(use)
   use('wbthomason/packer.nvim')
 
   -- Themes
-  use('vim-airline/vim-airline-themes')
-  use('vim-airline/vim-airline')
   use('folke/tokyonight.nvim')
 
   --  use 'KaptajnenGaming/themelas.nvim'
 
   -- Personal theme
   -- use 'H:/workspace/themelas'
+
+  -- Status line
+  use('nvim-lualine/lualine.nvim')
 
   -- All of it
   use('neovim/nvim-lspconfig')
