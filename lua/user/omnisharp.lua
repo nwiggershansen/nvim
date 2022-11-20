@@ -1,5 +1,8 @@
 vim.g.OmniSharp_highlight_groups = {
-  EnumMemberName = "Operator",
+  EnumMemberName = "@property",
   NamespaceName = "Type",
-  Keyword = "Statement"
+  Keyword = "Statement",
+  ControlKeyword = "markdownCode",
+  LocalName = "@variable",
+  FieldName = "@variable"
 }
