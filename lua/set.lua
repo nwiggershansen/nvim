@@ -14,5 +14,6 @@ vim.opt.wrap = false
 
 vim.g.mapleader = " "
 
-vim.diagnostic.config({ virtual_text = false, signs = true, float = { border = "single" }, })
+-- Hides the diagnostic event to the right of the issue
+-- vim.diagnostic.config({ virtual_text = false, signs = true, float = { border = "single" }, })
 
