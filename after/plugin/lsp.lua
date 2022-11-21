@@ -65,6 +65,7 @@ require('lspconfig').omnisharp.setup(config({
   cmd = omnisharp_cmd
 }, function()
   nnoremap("<C-f>", ':OmniSharpCodeFormat<CR>', { silent = true })
+  nnoremap('<C-k>', ':OmniSharpSignatureHelp<CR>', { silent = true })
 end))
 
 require('lspconfig').sumneko_lua.setup(config({
