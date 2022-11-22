@@ -17,3 +17,5 @@ vim.g.mapleader = " "
 -- Hides the diagnostic event to the right of the issue
 -- vim.diagnostic.config({ virtual_text = false, signs = true, float = { border = "single" }, })
 
+-- Yank copies it to clipboard
+vim.opt.clipboard:append('unnamedplus')
