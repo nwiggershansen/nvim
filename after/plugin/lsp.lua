@@ -6,6 +6,7 @@ local sumneko_path = mason_path .. "lua-language-server/extension/server/bin/lua
 
 local cmp = require('cmp')
 local lspkind = require('lspkind')
+local typescript = require('typescript')
 
 cmp.setup({
   snippet = {
@@ -66,8 +67,8 @@ end
 require('lspconfig').omnisharp.setup(config({
   cmd = omnisharp_cmd
 }, function()
-  nnoremap("<C-f>", ':OmniSharpCodeFormat<CR>', { silent = true })
-  nnoremap('<C-k>', ':OmniSharpSignatureHelp<CR>', { silent = true })
+  nnoremap("<C-f>", '<cmd>OmniSharpCodeFormat<CR>', { silent = true })
+  nnoremap('<C-k>', '<cmd>OmniSharpSignatureHelp<CR>', { silent = true })
 end))
 
 require('lspconfig').sumneko_lua.setup(config({
@@ -81,8 +82,21 @@ require('lspconfig').sumneko_lua.setup(config({
   }
 }, nil))
 
-require('lspconfig').tsserver.setup(config({}, nil))
-
 require('lspconfig').jsonls.setup(config({}, nil))
 
+require('lspconfig').tailwindcss.setup(config({}, nil))
+
+require('lspconfig').cssls.setup(config({}, nil))
+
+require('lspconfig').html.setup(config({}, nil))
+
 require('symbols-outline').setup()
+
+typescript.setup({
+  server = {
+    on_attach = function()
+      base_attach()
+      nnoremap('<F2>', '<cmd>TypescriptRenameFile<CR>')
+    end
+  }
+})
