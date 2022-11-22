@@ -58,4 +58,7 @@ return require('packer').startup(function(use)
 
   -- Git diff view
   use({ 'sindrets/diffview.nvim' })
+
+  -- Formatting helper for nonlsp
+  use('jose-elias-alvarez/null-ls.nvim')
 end)
