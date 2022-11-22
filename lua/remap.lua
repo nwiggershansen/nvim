@@ -47,3 +47,7 @@ nnoremap("<leader>to", "<cmd>tabnew<CR>") -- Open new tab
 nnoremap("<leader>tx", "<cmd>tabclose<CR>") -- Close current tab
 nnoremap("<leader>tn", "<cmd>tabn<CR>") -- Go to next tab
 nnoremap("<leader>tp", "<cmd>tabp<CR>") -- Go to previous tab
+
+nnoremap("<leader>e", "<cmd>NvimTreeToggle<CR>") -- Toggles file viewer
+
+nnoremap("<leader>rs", "<cmd>:LspRestart<CR>") -- Restarts lsp
