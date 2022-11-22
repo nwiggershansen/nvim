@@ -19,3 +19,5 @@ vim.g.mapleader = " "
 
 -- Yank copies it to clipboard
 vim.opt.clipboard:append('unnamedplus')
+
+vim.cmd [[set mouse=a]]
