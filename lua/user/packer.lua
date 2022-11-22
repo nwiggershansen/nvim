@@ -75,6 +75,9 @@ return require('packer').startup(function(use)
   -- Formatting helper for nonlsp
   use('jose-elias-alvarez/null-ls.nvim')
 
+  -- Allows removing/adding surrounds
+  use('tpope/vim-surround')
+
   if packer_bootstrap then
     require('packer').sync()
   end
