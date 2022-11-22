@@ -12,7 +12,8 @@ require("user.nvim-tree")
 vim.opt.wildignore:append { '*.meta' }
 
 vim.g.ale_linters = {
-  cs = { "OmniSharp" }
+  cs = { "OmniSharp" },
+  sh = { 'language_server' }
 }
 
 vim.g.ale_sign_error = '•'
@@ -25,4 +26,3 @@ vim.g.airline_powerline_fonts = 1
 
 vim.g.netrw_list_hide = '.*\\.meta$,.*\\.unity'
 vim.opt.termguicolors = true
-

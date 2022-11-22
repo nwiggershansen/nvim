@@ -90,6 +90,8 @@ require('lspconfig').cssls.setup(config({}, nil))
 
 require('lspconfig').html.setup(config({}, nil))
 
+require('lspconfig').bashls.setup(config({}, nil))
+
 require('symbols-outline').setup()
 
 typescript.setup({
