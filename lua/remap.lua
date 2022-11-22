@@ -35,3 +35,15 @@ nnoremap('qq', '<cmd>q<CR><cmd>q<CR>')
 -- Navigate between splits
 nnoremap('<C-h>', '<C-W>h')
 nnoremap('<C-l>', '<C-W>l')
+
+-- Split window
+nnoremap("<leader>sv", "<C-w>v") -- Split window vertically
+nnoremap("<leader>sh", "<C-w>s") -- Split window horizontally
+nnoremap("<leader>se", "<C-w>=") -- Make split windows equal width
+nnoremap("<leader>sx", "<cmd>close<CR>") -- Close current split window
+
+-- Tabs
+nnoremap("<leader>to", "<cmd>tabnew<CR>") -- Open new tab
+nnoremap("<leader>tx", "<cmd>tabclose<CR>") -- Close current tab
+nnoremap("<leader>tn", "<cmd>tabn<CR>") -- Go to next tab
+nnoremap("<leader>tp", "<cmd>tabp<CR>") -- Go to previous tab
