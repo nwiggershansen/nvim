@@ -1,6 +1,4 @@
 local nnoremap = require('keymap').nnoremap
-local mason_path = "C:/Users/Kaptajnen/AppData/Local/nvim-data/mason/packages/"
-local sumneko_path = mason_path .. "lua-language-server/extension/server/bin/lua-language-server.exe"
 
 local typescript = require('typescript')
 
@@ -25,17 +23,6 @@ local function config(_config, func)
     end
   }, _config or {})
 end
-
-require('lspconfig').sumneko_lua.setup(config({
-  cmd = { sumneko_path },
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" }
-      }
-    }
-  }
-}, nil))
 
 require('lspconfig').jsonls.setup(config({}, nil))
 
