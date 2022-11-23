@@ -117,3 +117,5 @@ local config = {
 }
 
 jdtls.start_or_attach(config)
+
+require('jdtls').setup_dap()

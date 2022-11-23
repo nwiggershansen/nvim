@@ -81,6 +81,10 @@ return require('packer').startup(function(use)
   -- Allows removing/adding surrounds
   use('tpope/vim-surround')
 
+  -- Java specific
+  use('mfussenegger/nvim-dap')
+  use('mfussenegger/nvim-jdtls')
+
   if packer_bootstrap then
     require('packer').sync()
   end
