@@ -13,6 +13,18 @@ local base_keymaps = function()
 end
 
 M.keymap = base_keymaps
-M.mason_path = "C:/Users/Kaptajnen/AppData/Local/nvim-data/mason/packages/"
+
+local home = os.getenv "HOME"
+
+if vim.fn.has "mac" == 1 then
+elseif vim.fn.has "unix" == 1 then
+elseif vim.fn.has "win32" == 1 then
+  if home ~= nil then
+    M.mason_path = home:gsub("\\", "/") .. "/AppData/Local/nvim-data/mason/packages/"
+  end
+else
+  M.mason_path = "C:/Users/Kaptajnen/AppData/Local/nvim-data/mason/packages/"
+end
 
 return M
+
