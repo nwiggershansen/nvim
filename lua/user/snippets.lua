@@ -30,8 +30,8 @@ ls.add_snippets(nil, {
         i(1, "namespace"),
         t({ "", "\tpublic class " }),
         f(function(_, parent) return get_filename_no_extension(parent) end),
-        t({ " : MonoBehaviour {" }),
-        i(2, {"", "\t\t"}),
+        t({ " : MonoBehaviour {", "\t\t" }),
+        i(2),
         t({ "",
           "}" }),
       })
