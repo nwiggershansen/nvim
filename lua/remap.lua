@@ -51,3 +51,4 @@ nnoremap("<leader>tp", "<cmd>tabp<CR>") -- Go to previous tab
 nnoremap("<leader>e", "<cmd>NvimTreeToggle<CR>") -- Toggles file viewer
 
 nnoremap("<leader>rs", "<cmd>:LspRestart<CR>") -- Restarts lsp
+

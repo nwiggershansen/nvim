@@ -1,13 +1,14 @@
 require("set")
 require("remap")
+require('treesitter-context').setup()
+require('symbols-outline').setup()
+require("diffview")
+require("user.nvim-tree")
 require("user.packer")
 require("user.telescope")
 require("user.mason")
 require("user.omnisharp")
-require("diffview")
-require('treesitter-context').setup()
-require('symbols-outline').setup()
-require("user.nvim-tree")
+require("user.snippets")
 
 vim.opt.wildignore:append { '*.meta' }
 

@@ -12,17 +12,28 @@ cmp.setup({
     ['C-Space'] = cmp.mapping.complete(),
     ['<C-k>'] = cmp.mapping.scroll_docs(-4),
     ['<C-j>'] = cmp.mapping.scroll_docs(4),
-  }),
+    ['<C-e>'] = cmp.mapping.close(),
+    ["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
+    ["<C-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
+   }),
   formatting = {
     format = lspkind.cmp_format({
+      with_text = true,
       mode = "symbol",
       maxwidth = 50,
       ellipsis_char = "...",
+      menu = {
+        buffer = "[buf]",
+        nvim_lsp = "[LSP]",
+        path = "[path]",
+        luasnip = "[snip]"
+      }
     })
   },
   sources = cmp.config.sources({
-    { name = 'luasnip' },
     { name = 'nvim_lsp' },
-    { name = 'path' }
+    { name = 'luasnip' },
+    { name = 'path' },
+    { name = 'buffer', keyword_length = 5 }
   })
 })
