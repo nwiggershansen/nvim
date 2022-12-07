@@ -28,7 +28,7 @@ ls.add_snippets(nil, {
           " ",
           "namespace WeMakeGames." }),
         i(1, "namespace"),
-        (" { "),
+        t(" { "),
         t({ "", "\tpublic class " }),
         f(function(_, parent) return get_filename_no_extension(parent) end),
         t({ " : MonoBehaviour {", "\t\t" }),
