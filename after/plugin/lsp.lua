@@ -1,4 +1,5 @@
 local base_config = require('user.base_config')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local function config(_config, func)
   return vim.tbl_deep_extend("force", {
@@ -11,15 +12,14 @@ local function config(_config, func)
   }, _config or {})
 end
 
-require('lspconfig').jsonls.setup(config({}, nil))
+require('lspconfig').jsonls.setup(config({ capabilities = capabilities }, nil))
 
-require('lspconfig').tailwindcss.setup(config({}, nil))
+require('lspconfig').tailwindcss.setup(config({ capabilities = capabilities }, nil))
 
-require('lspconfig').cssls.setup(config({}, nil))
+require('lspconfig').cssls.setup(config({ capabilities = capabilities }, nil))
 
-require('lspconfig').html.setup(config({}, nil))
+require('lspconfig').html.setup(config({ capabilities = capabilities }, nil))
 
-require('lspconfig').bashls.setup(config({}, nil))
+require('lspconfig').bashls.setup(config({ capabilities = capabilities }, nil))
 
 require('symbols-outline').setup()
-

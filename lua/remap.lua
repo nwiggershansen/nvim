@@ -52,3 +52,8 @@ nnoremap("<leader>e", "<cmd>NvimTreeToggle<CR>") -- Toggles file viewer
 
 nnoremap("<leader>rs", "<cmd>:LspRestart<CR>") -- Restarts lsp
 
+-- Barbar in nvim Tabs
+nnoremap("<A-,>", "<cmd>BufferPrevious<CR>")
+nnoremap("<A-.>", "<cmd>BufferNext<CR>")
+nnoremap("<A-<>", "<cmd>BufferMovePrevious<CR>")
+nnoremap("<A->>", "<cmd>BufferMoveNext<CR>")

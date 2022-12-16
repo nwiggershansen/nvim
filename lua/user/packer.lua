@@ -45,6 +45,7 @@ return require('packer').startup(function(use)
   -- Treesitter
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
   use('nvim-treesitter/playground')
+
   -- Sticky header for context
   use('nvim-treesitter/nvim-treesitter-context')
 
@@ -88,6 +89,9 @@ return require('packer').startup(function(use)
   -- Java specific
   use('mfussenegger/nvim-dap')
   use('mfussenegger/nvim-jdtls')
+
+  -- Tabs for recently opened files
+  use('romgrk/barbar.nvim')
 
   if packer_bootstrap then
     require('packer').sync()

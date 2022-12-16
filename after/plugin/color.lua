@@ -4,6 +4,7 @@ vim.g.tokyonight_transparent = true
 vim.g.airline_theme = "deus"
 
 vim.cmd("colorscheme tokyonight-storm")
+-- vim.cmd("colorscheme themelas")
 
 vim.cmd([[ highlight NvimTreeGitDirty guifg=#E0AF68 ]])
 -- vim.cmd([[ highlight NvimTreeGitStaged guifg=#FFFFFF ]])
