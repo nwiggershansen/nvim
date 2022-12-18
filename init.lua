@@ -9,6 +9,7 @@ require("user.telescope")
 require("user.mason")
 require("user.omnisharp")
 require("user.snippets")
+require("user.barbar")
 
 vim.opt.wildignore:append { '*.meta' }
 
