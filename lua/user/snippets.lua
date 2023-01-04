@@ -1,12 +1,14 @@
-local ls = require("luasnip")
+local status, ls = pcall(require, "luasnip")
+
+if not status then
+  return
+end
 
 -- Shorthands --
 local snippet = ls.s
 local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
-
-
 
 ls.config.set_config({
   history = true,

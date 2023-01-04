@@ -1,5 +1,14 @@
-local nvim_tree_events = require('nvim-tree.events')
-local bufferline_api = require('bufferline.api')
+local status, nvim_tree_events = pcall(require, "nvim-tree.events")
+
+if not status then
+  return
+end
+
+local bufferline_status, bufferline_api = pcall(require, "bufferline.api")
+
+if not bufferline_status then
+  return
+end
 
 local function get_tree_size()
   return require'nvim-tree.view'.View.width

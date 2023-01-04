@@ -1,5 +1,11 @@
 local base_config = require('user.base_config')
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local status, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+
+if not status then
+  return
+end
+
+local capabilities = cmp_nvim_lsp.default_capabilities()
 
 local function config(_config, func)
   return vim.tbl_deep_extend("force", {
