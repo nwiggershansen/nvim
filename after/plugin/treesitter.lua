@@ -10,3 +10,13 @@ nvim_treesitter.setup {
     enable = true
   },
 }
+
+local context_status, treesitter_context = pcall(require, 'treesitter-context')
+
+if not context_status then
+  return
+end
+
+treesitter_context.setup()
+
+

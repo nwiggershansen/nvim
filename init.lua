@@ -1,8 +1,6 @@
 require("set")
 require("remap")
-require('treesitter-context').setup()
-require('symbols-outline').setup()
-require("diffview")
+
 require("user.nvim-tree")
 require("user.packer")
 require("user.telescope")
