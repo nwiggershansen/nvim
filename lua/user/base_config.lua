@@ -11,7 +11,7 @@ local base_keymaps = function()
   vim.keymap.set('n', '<C-f>', function() vim.lsp.buf.format { async = true } end, opts)
   vim.keymap.set('n', '<C-k>', function() vim.lsp.buf.signature_help() end, opts)
   vim.keymap.set('n', '<C-n>', function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set('n', '<C-h>', function() vim.lsp.buf.hover() end, opts)
+  vim.keymap.set('n', '<C-o>', function() vim.lsp.buf.hover() end, opts)
 end
 
 M.keymap = base_keymaps
