@@ -28,4 +28,6 @@ require('lspconfig').html.setup(config({ capabilities = capabilities }, nil))
 
 require('lspconfig').bashls.setup(config({ capabilities = capabilities }, nil))
 
+require('lspconfig').yamlls.setup(config({ capabilities = capabilities }, nil))
+
 require('symbols-outline').setup()
