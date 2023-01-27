@@ -19,6 +19,12 @@ return require('packer').startup(function(use)
 
   -- Themes
   use('folke/tokyonight.nvim')
+  use('marko-cerovac/material.nvim')
+  use("EdenEast/nightfox.nvim")
+  use({ 'embark-theme/vim', as = 'embark' })
+  use("rebelot/kanagawa.nvim")
+  use('navarasu/onedark.nvim')
+  use({ "catppuccin/nvim", as = "catppuccin" })
 
   --  use 'KaptajnenGaming/themelas.nvim'
 
