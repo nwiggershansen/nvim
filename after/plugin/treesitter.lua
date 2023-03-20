@@ -9,6 +9,7 @@ nvim_treesitter.setup {
   highlight = {
     enable = true
   },
+  sync_install = false,
 }
 
 local context_status, treesitter_context = pcall(require, 'treesitter-context')

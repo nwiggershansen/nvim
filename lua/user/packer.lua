@@ -1,105 +1,101 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath("data") .. "site/pack/packer/start/packer.nvim"
-  if (fn.empty(fn.glob(install_path))) > 0 then
-    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-
-local packer_bootstrap = ensure_packer()
-
-
-return require('packer').startup(function(use)
-  -- Packer
-  use('wbthomason/packer.nvim')
-
+return require('lazy').setup({
   -- Themes
-  use('folke/tokyonight.nvim')
-  use('marko-cerovac/material.nvim')
-  use("EdenEast/nightfox.nvim")
-  use({ 'embark-theme/vim', as = 'embark' })
-  use("rebelot/kanagawa.nvim")
-  use('navarasu/onedark.nvim')
-  use({ "catppuccin/nvim", as = "catppuccin" })
+  'folke/tokyonight.nvim',
+  'marko-cerovac/material.nvim',
+  "EdenEast/nightfox.nvim",
+  { 'embark-theme/vim', as = 'embark' },
+  "rebelot/kanagawa.nvim",
+  'navarasu/onedark.nvim',
+  { "catppuccin/nvim",  as = "catppuccin" },
 
-  --  use 'KaptajnenGaming/themelas.nvim'
+  --   'KaptajnenGaming/themelas.nvim'
 
   -- Personal theme
-  -- use 'H:/workspace/themelas'
+  --  'H:/workspace/themelas'
 
   -- Status line
-  use('vim-airline/vim-airline-themes')
-  use('vim-airline/vim-airline')
-  -- use('nvim-lualine/lualine.nvim')
+  'vim-airline/vim-airline-themes',
+  'vim-airline/vim-airline',
+  -- 'nvim-lualine/lualine.nvim',
 
   -- All of it
-  use('neovim/nvim-lspconfig')
-  use('nvim-lua/plenary.nvim')
-  use('dense-analysis/ale')
-  use('simrat39/symbols-outline.nvim')
+  'neovim/nvim-lspconfig',
+  'nvim-lua/plenary.nvim',
+  'dense-analysis/ale',
+  'simrat39/symbols-outline.nvim',
 
   -- Fuzzy finder
-  use('nvim-telescope/telescope.nvim')
+  'nvim-telescope/telescope.nvim',
 
   -- LSP installer
-  use('williamboman/mason.nvim')
+  'williamboman/mason.nvim',
 
   -- Treesitter
-  use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-  use('nvim-treesitter/playground')
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ':TSUpdate'
+  },
+  'nvim-treesitter/playground',
 
   -- Sticky header for context
-  use('nvim-treesitter/nvim-treesitter-context')
+  'nvim-treesitter/nvim-treesitter-context',
 
   -- Auto completion
-  use('hrsh7th/nvim-cmp')
-  use('hrsh7th/cmp-nvim-lsp')
-  use('hrsh7th/cmp-buffer')
-  use('hrsh7th/cmp-path')
-  use('saadparwaiz1/cmp_luasnip')
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-path',
+  'saadparwaiz1/cmp_luasnip',
 
   -- Snippets
-  use('L3MON4D3/LuaSnip')
+  'L3MON4D3/LuaSnip',
 
   -- Icons for completion floating window
-  use('onsails/lspkind.nvim')
+  'onsails/lspkind.nvim',
 
   -- Comment helper
-  use('preservim/nerdcommenter')
+  'preservim/nerdcommenter',
 
   -- Git
-  use('tpope/vim-fugitive')
+  'tpope/vim-fugitive',
 
   -- C# specific
-  use('OmniSharp/omnisharp-vim')
+  'OmniSharp/omnisharp-vim',
 
   -- Typescript specific
-  use('jose-elias-alvarez/typescript.nvim')
+  'jose-elias-alvarez/typescript.nvim',
 
   -- Folder structure
-  use({ 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons', } })
+  { 'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons', } },
 
   -- Git diff view
-  use({ 'sindrets/diffview.nvim' })
+  { 'sindrets/diffview.nvim' },
 
   -- Formatting helper for nonlsp
-  use('jose-elias-alvarez/null-ls.nvim')
+  'jose-elias-alvarez/null-ls.nvim',
 
   -- Allows removing/adding surrounds
-  use('tpope/vim-surround')
+  'tpope/vim-surround',
 
   -- Java specific
-  use('mfussenegger/nvim-dap')
-  use('mfussenegger/nvim-jdtls')
+  'mfussenegger/nvim-jdtls',
 
   -- Tabs for recently opened files
-  use('romgrk/barbar.nvim')
+  'romgrk/barbar.nvim',
 
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+  -- DAP (Debug Adapter Protocol)
+  'mfussenegger/nvim-dap'
+})
