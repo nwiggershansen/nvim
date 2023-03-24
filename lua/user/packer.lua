@@ -74,6 +74,7 @@ return require('lazy').setup({
 
   -- C# specific
   'OmniSharp/omnisharp-vim',
+  'Hoffs/omnisharp-extended-lsp.nvim',
 
   -- Typescript specific
   'jose-elias-alvarez/typescript.nvim',

@@ -15,6 +15,9 @@ end
 require('lspconfig').omnisharp.setup({
   cmd = omnisharp_cmd,
   capabilities = capabilities,
+  handlers = {
+    ["textDocument/definition"] = require('omnisharp_extended').handler
+  },
   on_attach = function()
     base_config.keymap()
     nnoremap("<C-f>", '<cmd>OmniSharpCodeFormat<CR>', { silent = true })
