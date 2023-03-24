@@ -6,7 +6,7 @@ if vim.fn.has "mac" == 1 then
 elseif vim.fn.has "unix" == 1 then
   lua_bin_path = lua_bin_path .. "bin/lua-language-server"
 elseif vim.fn.has "win32" == 1 then
-  lua_bin_path = lua_bin_path .. "lua-language-server/extension/server/bin/lua-language-server.exe"
+  lua_bin_path = lua_bin_path .. "lua-language-server/bin/lua-language-server.exe"
 else
   return
 end
