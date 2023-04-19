@@ -1,7 +1,6 @@
 require("set")
 require("user.packer")
 
-require("remap")
 require("user.nvim-tree")
 require("user.telescope")
 require("user.mason")
