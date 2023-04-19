@@ -1,63 +1,69 @@
 local status, builtin = pcall(require, 'telescope.builtin')
-local keymap = require('keymap')
-local nnoremap = keymap.nnoremap
-local inoremap = keymap.inoremap
-local xnoremap = keymap.xnoremap
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
+local opts = { remap = false }
+vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>', opts)
 
 if status then
-  nnoremap("<C-p>", builtin.find_files)
-  nnoremap('<leader>ff', builtin.find_files)
-  nnoremap('<leader>fg', builtin.live_grep)
-  nnoremap('<leader>fb', builtin.buffers)
-  nnoremap('<leader>fh', builtin.help_tags)
+  vim.keymap.set('n', '<C-p>', builtin.find_files, opts)
+  vim.keymap.set('n', '<leader>ff', builtin.find_files, opts)
+  vim.keymap.set('n', '<leader>fg', builtin.live_grep, opts)
+  vim.keymap.set('n', '<leader>fb', builtin.buffers, opts)
+  vim.keymap.set('n', '<leader>fh', builtin.help_tags, opts)
 end
 
-nnoremap("<C-u>", "<C-u>zz")
-nnoremap("<C-d>", "<C-d>zz")
+vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
+vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
+-- vim.keymap.set('n', 'dd', function()
+--  if vim.api.nvim_get_current_line():match("^%s*$") then
+--    return '"_dd'
+--  else
+--    return 'dd'
+--  end
+-- end, opts)
 
-inoremap('{', '{}<Esc>ha')
-inoremap('[', '[]<Esc>ha')
-inoremap('(', '()<Esc>ha')
-inoremap('"', '""<Esc>ha')
-inoremap('\'', '\'\'<Esc>ha')
-inoremap('`', '``<Esc>ha')
+vim.keymap.set('i', '{', '{}<Esc>ha', opts);
+vim.keymap.set('i', '[', '[]<Esc>ha', opts);
+vim.keymap.set('i', '(', '()<Esc>ha', opts);
+vim.keymap.set('i', '"', '""<Esc>ha', opts);
+vim.keymap.set('i', '\'', '\'\'<Esc>ha', opts);
+vim.keymap.set('i', '`', '``<Esc>ha', opts);
 
-nnoremap('<S-Tab>', '<<')
+vim.keymap.set('n', '<S-Tab>', '<<')
 
-xnoremap("<leader>p", "\"_dP")
+vim.keymap.set('x', '<leader>p', '"_dP')
 
 -- Deletes everything between quotes and goes directly into insert mode
-nnoremap('di\"', 'di\"i')
-nnoremap('di\'', 'di\'i')
+vim.keymap.set('n', 'di\"', 'di\"i')
+vim.keymap.set('n', 'di\'', 'di\'i')
 
 -- Closes current file & nvim-tree
-nnoremap('qq', '<cmd>q<CR><cmd>q<CR>')
+vim.keymap.set('n', 'qq', '<cmd>q<CR><cmd>q<CR>')
 
 -- Navigate between splits
-nnoremap('<C-h>', '<C-W>h')
-nnoremap('<C-l>', '<C-W>l')
+vim.keymap.set('n', '<C-h>', '<C-W>h', opts)
+vim.keymap.set('n', '<C-l>', '<C-W>l', opts)
+vim.keymap.set('n', '<C-j>', '<C-W>j', opts)
+vim.keymap.set('n', '<C-k>', '<C-W>k', opts)
 
 -- Split window
-nnoremap("<leader>sv", "<C-w>v") -- Split window vertically
-nnoremap("<leader>sh", "<C-w>s") -- Split window horizontally
-nnoremap("<leader>se", "<C-w>=") -- Make split windows equal width
-nnoremap("<leader>sx", "<cmd>close<CR>") -- Close current split window
+vim.keymap.set('n', "<leader>sv", "<C-w>v")         -- Split window vertically
+vim.keymap.set('n', "<leader>sh", "<C-w>s")         -- Split window horizontally
+vim.keymap.set('n', "<leader>se", "<C-w>=")         -- Make split windows equal width
+vim.keymap.set('n', "<leader>sx", "<cmd>close<CR>") -- Close current split window
 
 -- Tabs
-nnoremap("<leader>to", "<cmd>tabnew<CR>") -- Open new tab
-nnoremap("<leader>tx", "<cmd>tabclose<CR>") -- Close current tab
-nnoremap("<leader>tn", "<cmd>tabn<CR>") -- Go to next tab
-nnoremap("<leader>tp", "<cmd>tabp<CR>") -- Go to previous tab
+vim.keymap.set('n', "<leader>to", "<cmd>tabnew<CR>")        -- Open new tab
+vim.keymap.set('n', "<leader>tx", "<cmd>tabclose<CR>")      -- Close current tab
+vim.keymap.set('n', "<leader>tn", "<cmd>tabn<CR>")          -- Go to next tab
+vim.keymap.set('n', "<leader>tp", "<cmd>tabp<CR>")          -- Go to previous tab
 
-nnoremap("<leader>e", "<cmd>NvimTreeToggle<CR>") -- Toggles file viewer
+vim.keymap.set('n', "<leader>e", "<cmd>NvimTreeToggle<CR>") -- Toggles file viewer
 
-nnoremap("<leader>rs", "<cmd>:LspRestart<CR>") -- Restarts lsp
+vim.keymap.set('n', "<leader>rs", "<cmd>:LspRestart<CR>")   -- Restarts lsp
 
 -- Barbar in nvim Tabs
-nnoremap("<A-,>", "<cmd>BufferPrevious<CR>")
-nnoremap("<A-.>", "<cmd>BufferNext<CR>")
-nnoremap("<A-<>", "<cmd>BufferMovePrevious<CR>")
-nnoremap("<A->>", "<cmd>BufferMoveNext<CR>")
-nnoremap("<A-w>", "<cmd>BufferClose<CR>")
+vim.keymap.set('n', "<A-,>", "<cmd>BufferPrevious<CR>")
+vim.keymap.set('n', "<A-.>", "<cmd>BufferNext<CR>")
+vim.keymap.set('n', "<A-<>", "<cmd>BufferMovePrevious<CR>")
+vim.keymap.set('n', "<A->>", "<cmd>BufferMoveNext<CR>")
+vim.keymap.set('n', "<A-w>", "<cmd>BufferClose<CR>")
