@@ -1,3 +1,10 @@
+require("tokyonight").setup({
+  styles = {
+    keywords = { italic = false },
+    comments = { italic = false }
+  }
+})
+
 vim.g.tokyonight_transparent_sidebar = true
 vim.g.tokyonight_transparent = true
 
