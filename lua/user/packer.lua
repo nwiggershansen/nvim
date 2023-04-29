@@ -72,6 +72,9 @@ return require('lazy').setup({
   -- Git
   'tpope/vim-fugitive',
 
+  -- Showing cross-file diagnostics 
+  'folke/trouble.nvim',
+
   -- C# specific
   'OmniSharp/omnisharp-vim',
   'Hoffs/omnisharp-extended-lsp.nvim',

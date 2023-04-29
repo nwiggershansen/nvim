@@ -58,7 +58,6 @@ vim.keymap.set('n', "<leader>tn", "<cmd>tabn<CR>")          -- Go to next tab
 vim.keymap.set('n', "<leader>tp", "<cmd>tabp<CR>")          -- Go to previous tab
 
 vim.keymap.set('n', "<leader>e", "<cmd>NvimTreeToggle<CR>") -- Toggles file viewer
-
 vim.keymap.set('n', "<leader>rs", "<cmd>:LspRestart<CR>")   -- Restarts lsp
 
 -- Barbar in nvim Tabs
@@ -67,3 +66,10 @@ vim.keymap.set('n', "<A-.>", "<cmd>BufferNext<CR>")
 vim.keymap.set('n', "<A-<>", "<cmd>BufferMovePrevious<CR>")
 vim.keymap.set('n', "<A->>", "<cmd>BufferMoveNext<CR>")
 vim.keymap.set('n', "<A-w>", "<cmd>BufferClose<CR>")
+
+-- Trouble 
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<CR>", opts)
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<CR>", opts)
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<CR>", opts)
