@@ -29,6 +29,7 @@ vim.keymap.set('i', '\'', '\'\'<Esc>ha', opts);
 vim.keymap.set('i', '`', '``<Esc>ha', opts);
 
 vim.keymap.set('n', '<S-Tab>', '<<')
+vim.keymap.set('i', '<S-Tab>', '<Esc><<hi')
 
 vim.keymap.set('x', '<leader>p', '"_dP')
 
@@ -73,3 +74,4 @@ vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>"
 vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
 vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<CR>", opts)
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<CR>", opts)
+
