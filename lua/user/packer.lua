@@ -67,7 +67,7 @@ return require('lazy').setup({
   'onsails/lspkind.nvim',
 
   -- Comment helper
-  'preservim/nerdcommenter',
+  'tpope/vim-commentary',
 
   -- Git
   'tpope/vim-fugitive',

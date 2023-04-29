@@ -12,7 +12,6 @@
   "lspkind.nvim": { "branch": "master", "commit": "c68b3a003483cf382428a43035079f78474cd11e" },
   "mason.nvim": { "branch": "main", "commit": "bf2d25391c6f16347c922229b8e7f80d417277e9" },
   "material.nvim": { "branch": "main", "commit": "0c725897bc3d22c45fbf25a602002ee02f06f619" },
-  "nerdcommenter": { "branch": "master", "commit": "1fe9e1cfea9bb0dbc77174d776759ed67899ee50" },
   "nightfox.nvim": { "branch": "main", "commit": "68db77db88bf997f060cf591f81813ccba97c5e6" },
   "null-ls.nvim": { "branch": "main", "commit": "33b853a3933eed3137cd055aac4e539e69832ad0" },
   "nvim": { "branch": "main", "commit": "dd176757cc745f71bd54c472a9f58d5f8a54661d" },
@@ -37,6 +36,7 @@
   "vim": { "branch": "main", "commit": "0e2c7d36b766dcebba2d8a3a0639784446dea086" },
   "vim-airline": { "branch": "master", "commit": "5891a3f7bedb5d0b23a546189a607836913814bb" },
   "vim-airline-themes": { "branch": "master", "commit": "dd81554c2231e438f6d0e8056ea38fd0e80ac02a" },
+  "vim-commentary": { "branch": "master", "commit": "e87cd90dc09c2a203e13af9704bd0ef79303d755" },
   "vim-fugitive": { "branch": "master", "commit": "e6651a79facf5cc2b7c554fdc19eb8a9fe89602c" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" }
 }
