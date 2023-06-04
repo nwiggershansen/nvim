@@ -1,7 +1,6 @@
 local status, builtin = pcall(require, 'telescope.builtin')
 
 local opts = { remap = false }
-vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>', opts)
 
 if status then
   vim.keymap.set('n', '<C-p>', builtin.find_files, opts)
@@ -34,6 +33,14 @@ vim.keymap.set('n', '<S-Tab>', '<<')
 vim.keymap.set('i', '<S-Tab>', '<Esc><<hi')
 
 vim.keymap.set('x', '<leader>p', '"_dP')
+
+-- Yank into system clipboard
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y') -- yank motion
+vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y') -- yank line
+
+-- Delete into system clipboard
+vim.keymap.set({'n', 'v'}, '<leader>d', '"+d') -- delete motion
+vim.keymap.set({'n', 'v'}, '<leader>D', '"+D') -- delete line
 
 -- Deletes everything between quotes and goes directly into insert mode
 vim.keymap.set('n', 'di\"', 'di\"i')
