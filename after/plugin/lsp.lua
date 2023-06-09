@@ -6,6 +6,7 @@ if not status then
 end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
+local bicep_command = base_config.mason_path .. "bin/bicep-lsp"
 
 local function config(_config, func)
   return vim.tbl_deep_extend("force", {
@@ -29,5 +30,7 @@ require('lspconfig').html.setup(config({ capabilities = capabilities }, nil))
 require('lspconfig').bashls.setup(config({ capabilities = capabilities }, nil))
 
 require('lspconfig').yamlls.setup(config({ capabilities = capabilities }, nil))
+
+require('lspconfig').bicep.setup(config({ cmd = { bicep_command }, capabilities = capabilities }, nil))
 
 require('symbols-outline').setup()

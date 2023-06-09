@@ -100,6 +100,9 @@ return require('lazy').setup({
   -- Tabs for recently opened files
   'romgrk/barbar.nvim',
 
+  -- Bicep highlight groups
+  'carlsmedstad/vim-bicep',
+
   -- DAP (Debug Adapter Protocol)
   'mfussenegger/nvim-dap'
 })
