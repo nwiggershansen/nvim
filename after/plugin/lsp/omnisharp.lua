@@ -2,8 +2,18 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local base_config = require('user.base_config')
 local omnisharp_config = require("omnisharp_config")
 local mason_path = base_config.mason_path
-local omnisharp_path = mason_path .. "omnisharp/OmniSharp.exe"
 local opts = { remap = false, silent = true }
+
+local omnisharp_path = mason_path
+
+if vim.fn.has "mac" == 1 then
+elseif vim.fn.has "unix" == 1 then
+  omnisharp_path = omnisharp_path .. "packages/omnisharp/omnisharp"
+elseif vim.fn.has "win32" == 1 then
+  omnisharp_path = omnisharp_path .. "omnisharp/OmniSharp.exe"
+else
+  omnisharp_path = "omnisharp/omnisharp"
+end
 
 
 capabilities = vim.tbl_deep_extend("force", capabilities, {
