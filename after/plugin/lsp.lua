@@ -29,7 +29,16 @@ require('lspconfig').html.setup(config({ capabilities = capabilities }, nil))
 
 require('lspconfig').bashls.setup(config({ capabilities = capabilities }, nil))
 
-require('lspconfig').yamlls.setup(config({ capabilities = capabilities }, nil))
+require('lspconfig').yamlls.setup(config({
+  capabilities = capabilities,
+  settings = {
+    yaml = {
+      schemas = {
+        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = "azure-pipelines.yml"
+      }
+    }
+  }
+}, nil))
 
 require('lspconfig').bicep.setup(config({ cmd = { bicep_command }, capabilities = capabilities }, nil))
 
