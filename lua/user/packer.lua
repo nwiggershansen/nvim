@@ -16,12 +16,11 @@ return require('lazy').setup({
   'folke/tokyonight.nvim',
   'marko-cerovac/material.nvim',
   "EdenEast/nightfox.nvim",
-  { 'embark-theme/vim', as = 'embark' },
   "rebelot/kanagawa.nvim",
   'navarasu/onedark.nvim',
   { "catppuccin/nvim",  as = "catppuccin" },
   'rmehri01/onenord.nvim',
-  'nordtheme/vim',
+  { 'nordtheme/vim', as = "nordtheme" },
   'rose-pine/neovim',
 
   --   'KaptajnenGaming/themelas.nvim'
