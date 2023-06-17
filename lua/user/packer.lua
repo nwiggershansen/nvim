@@ -20,6 +20,9 @@ return require('lazy').setup({
   "rebelot/kanagawa.nvim",
   'navarasu/onedark.nvim',
   { "catppuccin/nvim",  as = "catppuccin" },
+  'rmehri01/onenord.nvim',
+  'nordtheme/vim',
+  'rose-pine/neovim',
 
   --   'KaptajnenGaming/themelas.nvim'
 
@@ -72,7 +75,7 @@ return require('lazy').setup({
   -- Git
   'tpope/vim-fugitive',
 
-  -- Showing cross-file diagnostics 
+  -- Showing cross-file diagnostics
   'folke/trouble.nvim',
 
   -- C# specific
