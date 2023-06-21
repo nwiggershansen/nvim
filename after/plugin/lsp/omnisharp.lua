@@ -41,6 +41,7 @@ require('lspconfig').omnisharp.setup({
     base_config.keymap()
     vim.keymap.set('n', '<C-f>', '<cmd>OmniSharpCodeFormat<CR>', opts)
     vim.keymap.set('n', '<C-k>', '<cmd>OmniSharpSignatureHelp<CR>', opts)
+    vim.keymap.set('n', 'gi', '<cmd>OmniSharpFindImplementations<CR>', opts)
 
     -- https://github.com/OmniSharp/omnisharp-roslyn/issues/2483
     client.server_capabilities.semanticTokensProvider = {
