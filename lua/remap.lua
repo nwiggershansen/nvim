@@ -33,7 +33,8 @@ vim.keymap.set('n', '<S-Tab>', '<<')
 vim.keymap.set('i', '<S-Tab>', '<Esc><<hi')
 vim.keymap.set('v', '<S-Tab>', '<gv')
 
-vim.keymap.set('n', '<Tab>', '>>')
+-- This interferes with the jump list of Ctrl + i
+-- vim.keymap.set('n', '<Tab>', '>>')
 vim.keymap.set('i', '<Tab>', '<Esc>>>hi')
 vim.keymap.set('v', '<Tab>', '>gv')
 
