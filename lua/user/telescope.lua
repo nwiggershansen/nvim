@@ -5,5 +5,10 @@ if not status then
 end
 
 telescope.setup {
-  defaults = { file_ignore_patterns = { '.meta', '.unity' } }
+  defaults = { file_ignore_patterns = { '.meta', '.unity' } },
+  pickers = {
+   find_files = {
+     find_command = { 'fd', '--type', 'f', '--hidden', '--exclude', '.git' }
+   }
+  }
 }
