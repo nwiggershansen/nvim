@@ -25,6 +25,12 @@ if vim.fn.has "win32" == 1 then
       find_command = { 'fd', '--type', 'f', '--hidden', '--exclude', '.git' }
     },
   })
+else
+pickers = vim.tbl_deep_extend("force", pickers, {
+    find_files = {
+      find_command = { 'rg', '--files', '--hidden', '-g', '!**/.git/*' }
+    },
+  })
 end
 
 telescope.setup {
