@@ -7,12 +7,12 @@ end
 
 local pickers = {
   live_grep = {
-    additional_args = function(opts)
+    additional_args = function(_)
       return grep_args
     end
   },
   grep_string = {
-    additional_args = function(opts)
+    additional_args = function(_)
       return grep_args
     end
   },
