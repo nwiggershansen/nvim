@@ -5,21 +5,29 @@ if not status then
   return
 end
 
-telescope.setup {
-  defaults = { file_ignore_patterns = { '.meta', '.unity' } },
-  pickers = {
+local pickers = {
+  live_grep = {
+    additional_args = function(opts)
+      return grep_args
+    end
+  },
+  grep_string = {
+    additional_args = function(opts)
+      return grep_args
+    end
+  },
+}
+
+
+if vim.fn.has "win32" == 1 then
+  pickers = vim.tbl_deep_extend("force", pickers, {
     find_files = {
       find_command = { 'fd', '--type', 'f', '--hidden', '--exclude', '.git' }
     },
-    live_grep = {
-      additional_args = function(opts)
-        return grep_args
-      end
-    },
-    grep_string = {
-      additional_args = function(opts)
-        return grep_args
-      end
-    },
-  }
+  })
+end
+
+telescope.setup {
+  defaults = { file_ignore_patterns = { '.meta', '.unity' } },
+  pickers = pickers,
 }
