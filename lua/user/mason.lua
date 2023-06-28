@@ -4,5 +4,6 @@ if not status then
   return
 end
 
-mason.setup()
-
+mason.setup({
+  PATH = "prepend"
+})

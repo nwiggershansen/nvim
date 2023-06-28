@@ -9,9 +9,9 @@ local base_keymaps = function()
   vim.keymap.set('n', ']d', function() vim.diagnostic.goto_prev() end, opts)
   vim.keymap.set('n', '<C-m>', function() vim.lsp.buf.code_action() end, opts)
   vim.keymap.set('n', '<C-f>', function() vim.lsp.buf.format { async = true } end, opts)
-  vim.keymap.set('n', '<C-k>', function() vim.lsp.buf.signature_help() end, opts)
+  vim.keymap.set('n', '<leader>sh', function() vim.lsp.buf.signature_help() end, opts)
   vim.keymap.set('n', '<C-n>', function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set('n', '<C-h>', function() vim.lsp.buf.hover() end, opts)
+  vim.keymap.set('n', '<leader>h', function() vim.lsp.buf.hover() end, opts)
 end
 
 M.keymap = base_keymaps
