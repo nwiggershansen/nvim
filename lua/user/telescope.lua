@@ -7,19 +7,25 @@ end
 
 local pickers = {
   live_grep = {
-    additional_args = function(opts)
+    additional_args = function(_)
       return grep_args
     end
   },
   grep_string = {
-    additional_args = function(opts)
+    additional_args = function(_)
       return grep_args
     end
   },
 }
 
 
-if vim.fn.has "win32" == 1 then
+if vim.fn.has "unix" == 1 then
+  pickers = vim.tbl_deep_extend("force", pickers, {
+    find_files = {
+      find_command = { 'rg', '--files', '--hidden', '-g', '!**/.git/*' }
+    },
+  })
+else
   pickers = vim.tbl_deep_extend("force", pickers, {
     find_files = {
       find_command = { 'fd', '--type', 'f', '--hidden', '--exclude', '.git' }
