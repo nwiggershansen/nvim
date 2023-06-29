@@ -26,3 +26,5 @@ vim.g.airline_powerline_fonts = 1
 
 vim.g.netrw_list_hide = '.*\\.meta$,.*\\.unity'
 vim.opt.termguicolors = true
+
+vim.opt.wrap = true
