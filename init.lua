@@ -28,3 +28,4 @@ vim.g.netrw_list_hide = '.*\\.meta$,.*\\.unity'
 vim.opt.termguicolors = true
 
 vim.opt.wrap = true
+vim.opt.linebreak = true
