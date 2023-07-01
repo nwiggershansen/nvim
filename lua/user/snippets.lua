@@ -38,7 +38,21 @@ ls.add_snippets(nil, {
         t({ "",
           "\t}",
           "}" }),
-      })
+      }),
+    snippet("interface", {
+      t({ "using System;",
+        " ",
+        "namespace WeMakeGames." }),
+      i(1, "namespace"),
+      t(" { "),
+      t({ "", "\tpublic interface " }),
+      f(function(_, parent) return get_filename_no_extension(parent) end),
+      t({ " {", "\t\t" }),
+      i(2),
+      t({ "",
+        "\t}",
+        "}" }),
+    })
   }
 })
 
