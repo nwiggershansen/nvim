@@ -92,3 +92,7 @@ vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>",
 vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<CR>", opts)
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<CR>", opts)
 
+-- Resize buffer without having to do count
+vim.keymap.set("n", "<C-w><", "10<C-w><", opts)
+vim.keymap.set("n", "<C-w>>", "10<C-w>>", opts)
+
