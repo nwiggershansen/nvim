@@ -38,6 +38,8 @@ vim.keymap.set('v', '<S-Tab>', '<gv')
 vim.keymap.set('i', '<Tab>', '<Esc>>>hi')
 vim.keymap.set('v', '<Tab>', '>gv')
 
+vim.keymap.set('n', '<A-j>', '<cmd>m +1<CR>')
+vim.keymap.set('n', '<A-k>', '<cmd>m -2<CR>')
 vim.keymap.set('x', '<leader>p', '"_dP')
 
 -- Yank into system clipboard
