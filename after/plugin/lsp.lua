@@ -34,7 +34,8 @@ require('lspconfig').yamlls.setup(config({
   settings = {
     yaml = {
       schemas = {
-        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = "azure-pipelines.yml"
+        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = "*azure-pipelines*.yml",
+        ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*"
       }
     }
   }
