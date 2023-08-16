@@ -43,12 +43,12 @@ vim.keymap.set('n', '<A-k>', '<cmd>m -2<CR>')
 vim.keymap.set('x', '<leader>p', '"_dP')
 
 -- Yank into system clipboard
-vim.keymap.set({'n', 'v'}, '<leader>y', '"+y') -- yank motion
-vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y') -- yank line
+vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y') -- yank motion
+vim.keymap.set({ 'n', 'v' }, '<leader>Y', '"+Y') -- yank line
 
 -- Delete into system clipboard
-vim.keymap.set({'n', 'v'}, '<leader>d', '"+d') -- delete motion
-vim.keymap.set({'n', 'v'}, '<leader>D', '"+D') -- delete line
+vim.keymap.set({ 'n', 'v' }, '<leader>d', '"+d') -- delete motion
+vim.keymap.set({ 'n', 'v' }, '<leader>D', '"+D') -- delete line
 
 -- Deletes everything between quotes and goes directly into insert mode
 vim.keymap.set('n', 'di\"', 'di\"i')
@@ -85,7 +85,7 @@ vim.keymap.set('n', "<A-<>", "<cmd>BufferMovePrevious<CR>")
 vim.keymap.set('n', "<A->>", "<cmd>BufferMoveNext<CR>")
 vim.keymap.set('n', "<A-w>", "<cmd>BufferClose<CR>")
 
--- Trouble 
+-- Trouble
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<CR>", opts)
 vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
 vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
@@ -98,3 +98,13 @@ vim.keymap.set("n", "<C-w>>", "10<C-w>>", opts)
 vim.keymap.set("n", "<leader><", "10<C-w><", opts)
 vim.keymap.set("n", "<leader>>", "10<C-w>>", opts)
 
+
+-- Nvim-dap
+vim.keymap.set("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
+vim.keymap.set("n", "<F10>", "<cmd>lua require'dap'.step_over()<CR>", opts)
+vim.keymap.set("n", "<F11>", "<cmd>lua require'dap'.step_into()<CR>", opts)
+vim.keymap.set("n", "<F12>", "<cmd>lua require'dap'.step_out()<CR>", opts)
+vim.keymap.set("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
+vim.keymap.set("n", "<leader>B", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
+vim.keymap.set("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
+vim.keymap.set("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)

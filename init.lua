@@ -8,6 +8,7 @@ require("user.mason")
 require("user.omnisharp")
 require("user.snippets")
 require("user.barbar")
+require("user.dap")
 
 vim.opt.wildignore:append { '*.meta' }
 
