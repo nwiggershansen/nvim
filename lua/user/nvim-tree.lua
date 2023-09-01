@@ -1,11 +1,11 @@
 local setup, nvimtree = pcall(require, "nvim-tree")
+local loaded, nvimtreeapi = pcall(require, "nvim-tree.api")
 
 if not setup then
   return
 end
 
 local function open_nvim_tree(data)
-
   -- buffer is a directory
   local directory = vim.fn.isdirectory(data.file) == 1
 
@@ -50,7 +50,8 @@ nvimtree.setup({
     }
   },
   filters = {
-    custom = { ".meta$", ".unity$" }
+    custom = { ".meta$", ".unity$", ".git/*" }
   }
 })
 
+nvimtreeapi.tree.toggle_gitignore_filter()
