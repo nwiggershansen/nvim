@@ -54,9 +54,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>D', '"+D') -- delete line
 vim.keymap.set('n', 'di\"', 'di\"i')
 vim.keymap.set('n', 'di\'', 'di\'i')
 
--- Closes current file & nvim-tree
-vim.keymap.set('n', 'qq', '<cmd>q<CR><cmd>q<CR>')
-
 -- Navigate between splits
 vim.keymap.set('n', '<C-h>', '<C-W>h', opts)
 vim.keymap.set('n', '<C-l>', '<C-W>l', opts)
@@ -78,33 +75,9 @@ vim.keymap.set('n', "<leader>tp", "<cmd>tabp<CR>")          -- Go to previous ta
 vim.keymap.set('n', "<leader>e", "<cmd>NvimTreeToggle<CR>") -- Toggles file viewer
 vim.keymap.set('n', "<leader>rs", "<cmd>:LspRestart<CR>")   -- Restarts lsp
 
--- Barbar in nvim Tabs
-vim.keymap.set('n', "<A-,>", "<cmd>BufferPrevious<CR>")
-vim.keymap.set('n', "<A-.>", "<cmd>BufferNext<CR>")
-vim.keymap.set('n', "<A-<>", "<cmd>BufferMovePrevious<CR>")
-vim.keymap.set('n', "<A->>", "<cmd>BufferMoveNext<CR>")
-vim.keymap.set('n', "<A-w>", "<cmd>BufferClose<CR>")
-
--- Trouble
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<CR>", opts)
-vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
-vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<CR>", opts)
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<CR>", opts)
-
 -- Resize buffer without having to do count
 vim.keymap.set("n", "<C-w><", "10<C-w><", opts)
 vim.keymap.set("n", "<C-w>>", "10<C-w>>", opts)
 vim.keymap.set("n", "<leader><", "10<C-w><", opts)
 vim.keymap.set("n", "<leader>>", "10<C-w>>", opts)
 
-
--- Nvim-dap
-vim.keymap.set("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
-vim.keymap.set("n", "<F10>", "<cmd>lua require'dap'.step_over()<CR>", opts)
-vim.keymap.set("n", "<F11>", "<cmd>lua require'dap'.step_into()<CR>", opts)
-vim.keymap.set("n", "<F12>", "<cmd>lua require'dap'.step_out()<CR>", opts)
-vim.keymap.set("n", "<leader>b", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", opts)
-vim.keymap.set("n", "<leader>B", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
-vim.keymap.set("n", "<leader>dr", "<cmd>lua require'dap'.repl.open()<CR>", opts)
-vim.keymap.set("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)

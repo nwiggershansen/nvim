@@ -107,5 +107,8 @@ return require('lazy').setup({
 
   -- DAP (Debug Adapter Protocol)
   'mfussenegger/nvim-dap',
-  { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } }
+  { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } },
+
+  -- Marker jumping
+  'ThePrimeagen/harpoon'
 })

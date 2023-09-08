@@ -25,3 +25,11 @@ end)
 nvim_tree_events.subscribe('TreeClose', function()
   bufferline_api.set_offset(0)
 end)
+
+vim.keymap.set('n', "<A-,>", "<cmd>BufferPrevious<CR>")
+vim.keymap.set('n', "<A-.>", "<cmd>BufferNext<CR>")
+vim.keymap.set('n', "<A-<>", "<cmd>BufferMovePrevious<CR>")
+vim.keymap.set('n', "<A->>", "<cmd>BufferMoveNext<CR>")
+vim.keymap.set('n', "<A-w>", "<cmd>BufferClose<CR>")
+
+
