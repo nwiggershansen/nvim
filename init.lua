@@ -25,6 +25,8 @@ vim.g.ale_sign_style_warning = '·'
 
 vim.g.airline_powerline_fonts = 1
 
+vim.opt.updatetime = 50
+
 vim.g.netrw_list_hide = '.*\\.meta$,.*\\.unity'
 vim.opt.termguicolors = true
 
