@@ -110,5 +110,8 @@ return require('lazy').setup({
   { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } },
 
   -- Marker jumping
-  'ThePrimeagen/harpoon'
+  'ThePrimeagen/harpoon',
+
+  -- Autopairs
+  'windwp/nvim-autopairs'
 })

@@ -22,12 +22,12 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
 --   end
 -- end, opts)
 
-vim.keymap.set('i', '{', '{}<Esc>ha', opts);
-vim.keymap.set('i', '[', '[]<Esc>ha', opts);
-vim.keymap.set('i', '(', '()<Esc>ha', opts);
-vim.keymap.set('i', '"', '""<Esc>ha', opts);
-vim.keymap.set('i', '\'', '\'\'<Esc>ha', opts);
-vim.keymap.set('i', '`', '``<Esc>ha', opts);
+-- vim.keymap.set('i', '{', '{}<Esc>ha', opts);
+-- vim.keymap.set('i', '[', '[]<Esc>ha', opts);
+-- vim.keymap.set('i', '(', '()<Esc>ha', opts);
+-- vim.keymap.set('i', '"', '""<Esc>ha', opts);
+-- vim.keymap.set('i', '\'', '\'\'<Esc>ha', opts);
+-- vim.keymap.set('i', '`', '``<Esc>ha', opts);
 
 vim.keymap.set('n', '<S-Tab>', '<<')
 vim.keymap.set('i', '<S-Tab>', '<Esc><<hi')

@@ -1,5 +1,6 @@
 local status, telescope = pcall(require, "telescope")
-local grep_args = { '--no-ignore', '--hidden', '-g', '!**/.git/*', '-g', '!**/node_modules/*', '-g', '!*.lock' }
+local grep_args = { '--no-ignore', '--hidden', '-g', '!**/.git/*', '-g', '!**/node_modules/*', '-g', '!*.lock', '-g',
+  '!**/Temp/*' }
 
 if not status then
   return
@@ -21,7 +22,8 @@ local pickers = {
 if vim.fn.has "unix" == 1 then
   pickers = vim.tbl_deep_extend("force", pickers, {
     find_files = {
-      find_command = { 'rg', '--files', '--no-ignore', '--hidden', '-g', '!**/.git/*', '-g', '!**/node_modules/*', '-g', '!*.lock'  }
+      find_command = { 'rg', '--files', '--no-ignore', '--hidden', '-g', '!**/.git/*', '-g', '!**/node_modules/*', '-g',
+        '!*.lock', '-g', '!**/Temp/*' }
     },
   })
 else
