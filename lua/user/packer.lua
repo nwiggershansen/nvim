@@ -116,5 +116,12 @@ return require('lazy').setup({
   'windwp/nvim-autopairs',
 
   -- Terminal in neovim
-  'akinsho/toggleterm.nvim'
+  'akinsho/toggleterm.nvim',
+
+  -- Jump annotations
+  {
+    'smoka7/hop.nvim',
+    version = "*",
+    opts = {},
+  }
 })
