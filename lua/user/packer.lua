@@ -113,5 +113,8 @@ return require('lazy').setup({
   'ThePrimeagen/harpoon',
 
   -- Autopairs
-  'windwp/nvim-autopairs'
+  'windwp/nvim-autopairs',
+
+  -- Terminal in neovim
+  'akinsho/toggleterm.nvim'
 })
