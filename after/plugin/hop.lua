@@ -18,4 +18,4 @@ end, { remap = true })
 
 vim.api.nvim_set_keymap('n', 's', '<cmd>HopChar2<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', 'S', '<cmd>HopWord<CR>', { silent = true })
-vim.api.nvim_set_keymap('n', 'ls', '<cmd>HopLine<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ls', '<cmd>HopLine<CR>', { silent = true })
