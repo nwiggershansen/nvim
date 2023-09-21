@@ -7,7 +7,7 @@ elseif vim.fn.has "unix" == 1 then
     close_on_exit = true,
     auto_scroll = true,
     terminal_mappings = true,
-    shell = "cmd.exe"
+    shell = "teminator"
   })
 elseif vim.fn.has "win32" == 1 then
   toggleterm.setup({
