@@ -17,7 +17,6 @@ elseif vim.fn.has "win32" == 1 then
     terminal_mappings = true,
     shell = "cmd.exe"
   })
+  vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>', '<cmd>:1ToggleTerm direction=float<CR>')
 else
 end
-
-vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>', '<cmd>:1ToggleTerm direction=float<CR>')
