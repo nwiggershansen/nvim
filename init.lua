@@ -1,19 +1,19 @@
-require("set")
-require("user.packer")
+require('set')
+require('user.packer')
 
 require('remap')
-require("user.nvim-tree")
-require("user.telescope")
-require("user.mason")
-require("user.omnisharp")
-require("user.snippets")
-require("user.barbar")
-require("user.dap")
+require('user.nvim-tree')
+require('user.telescope')
+require('user.mason')
+require('user.omnisharp')
+require('user.snippets')
+require('user.barbar')
+require('user.dap')
 
 vim.opt.wildignore:append { '*.meta' }
 
 vim.g.ale_linters = {
-  cs = { "OmniSharp" },
+  cs = { 'OmniSharp' },
   sh = { 'language_server' }
 }
 
