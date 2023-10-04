@@ -27,7 +27,7 @@ ls.add_snippets(nil, {
     snippet("uclass", {
       t({ "using UnityEngine;",
         " ",
-        "namespace MPG." }),
+        "namespace Game." }),
       i(1, "namespace"),
       t(" { "),
       t({ "", "\tpublic class " }),
@@ -41,7 +41,7 @@ ls.add_snippets(nil, {
     snippet("interface", {
       t({ "using System;",
         " ",
-        "namespace MPG." }),
+        "namespace Game." }),
       i(1, "namespace"),
       t(" { "),
       t({ "", "\tpublic interface " }),
@@ -56,7 +56,7 @@ ls.add_snippets(nil, {
       t({ "using Unity.Burst;",
         "using Unity.Entities;",
         " ",
-        "namespace MPG." }),
+        "namespace Game." }),
       i(1, "namespace"),
       t(" { "),
       t({ "", "\t\t[BurstCompile]" }),
@@ -70,7 +70,7 @@ ls.add_snippets(nil, {
     snippet("ecsdatacomp", {
       t({ "using Unity.Entities;",
         " ",
-        "namespace MPG." }),
+        "namespace Game." }),
       i(1, "namespace"),
       t(" { "),
       t({ "", "\t\tpublic struct " }),
