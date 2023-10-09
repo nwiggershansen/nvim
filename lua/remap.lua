@@ -103,8 +103,8 @@ keymap.set({'n', 'i'}, '<Right>', '<Nop>')
 keymap.set({'n', 'i'}, '<Up>', '<Nop>')
 keymap.set({'n', 'i'}, '<Down>', '<Nop>')
 
-keymap.set('n', '<leader>qq', '<cmd>quitall<CR>')
-keymap.set('n', '<leader>QQ', '<cmd>quitall!<CR>')
+keymap.set('n', '<leader>qq', '<cmd>qa<CR>')
+keymap.set('n', '<leader>QQ', '<cmd>qa!<CR>')
 
 keymap.set('n', '<leader>ri"', '"_di"P')
 keymap.set('n', '<leader>ri{', '"_di{P')
