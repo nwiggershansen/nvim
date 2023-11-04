@@ -111,3 +111,5 @@ keymap.set('n', '<leader>ri{', '"_di{P')
 keymap.set('n', '<leader>ri(', '"_di(P')
 keymap.set('n', '<leader>ri[', '"_di[P')
 keymap.set('n', '<leader>ri\'', '"_di\'P')
+
+keymap.set({'n', 'i'}, '<C-c>', ':q<CR>')
