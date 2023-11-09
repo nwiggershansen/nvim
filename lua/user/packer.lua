@@ -50,7 +50,6 @@ return require('lazy').setup({
     "nvim-treesitter/nvim-treesitter",
     build = ':TSUpdate'
   },
-  'nvim-treesitter/playground',
 
   -- Sticky header for context
   'nvim-treesitter/nvim-treesitter-context',
