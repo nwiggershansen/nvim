@@ -12,6 +12,7 @@ local base_keymaps = function()
   vim.keymap.set('n', '<leader>fm', function() vim.lsp.buf.format { async = true } end, opts)
   vim.keymap.set('n', '<leader>sh', function() vim.lsp.buf.signature_help() end, opts)
   vim.keymap.set('n', '<C-n>', function() vim.lsp.buf.references() end, opts)
+  vim.keymap.set('n', 'gr', function() vim.lsp.buf.references() end, opts)
   -- vim.keymap.set('n', '<leader>h', function() vim.lsp.buf.hover() end, opts)
 end
 
