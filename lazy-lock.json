@@ -34,6 +34,7 @@
   "onenord.nvim": { "branch": "main", "commit": "3b3ae8a1f32d9f735b5c9ccf287b73e0f5e6d7a5" },
   "playground": { "branch": "master", "commit": "2b81a018a49f8e476341dfcb228b7b808baba68b" },
   "plenary.nvim": { "branch": "master", "commit": "36aaceb6e93addd20b1b18f94d86aecc552f30c4" },
+  "schemastore.nvim": { "branch": "main", "commit": "f934fbbf417cf05da7f1576c67655ab25f7b702d" },
   "symbols-outline.nvim": { "branch": "master", "commit": "512791925d57a61c545bc303356e8a8f7869763c" },
   "telescope.nvim": { "branch": "master", "commit": "00cf15074a2997487813672a75f946d2ead95eb0" },
   "toggleterm.nvim": { "branch": "main", "commit": "0427b908ebefcb3701c7f2cfbdafa37d11afe71a" },

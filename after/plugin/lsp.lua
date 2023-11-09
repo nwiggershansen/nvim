@@ -19,7 +19,15 @@ local function config(_config, func)
   }, _config or {})
 end
 
-require('lspconfig').jsonls.setup(config({ capabilities = capabilities }, nil))
+require('lspconfig').jsonls.setup(config({
+  capabilities = capabilities,
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true },
+    },
+  }
+}, nil))
 
 require('lspconfig').tailwindcss.setup(config({ capabilities = capabilities }, nil))
 
