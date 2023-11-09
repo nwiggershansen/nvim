@@ -5,7 +5,7 @@ if not status then
 end
 
 nvim_treesitter.setup {
-  ensure_installed = { 'javascript', 'typescript', 'tsx', 'bash', 'dockerfile', 'lua' },
+  ensure_installed = { 'javascript', 'typescript', 'tsx', 'bash', 'dockerfile', 'lua', 'bicep' },
   highlight = {
     enable = true
   },
