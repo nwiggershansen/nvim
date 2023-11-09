@@ -113,3 +113,5 @@ keymap.set('n', '<leader>ri[', '"_di[P')
 keymap.set('n', '<leader>ri\'', '"_di\'P')
 
 keymap.set({'n', 'i'}, '<C-c>', '<cmd>q<CR>')
+
+keymap.set('n', '<leader>so', '<cmd>SymbolsOutline<CR>')
