@@ -80,9 +80,6 @@ return require('lazy').setup({
   'OmniSharp/omnisharp-vim',
   'Hoffs/omnisharp-extended-lsp.nvim',
 
-  -- Typescript specific
-  'jose-elias-alvarez/typescript.nvim',
-
   -- Folder structure
   { 'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons', } },
 
