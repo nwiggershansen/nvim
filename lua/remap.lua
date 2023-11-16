@@ -14,14 +14,13 @@ end
 keymap.set('n', '<C-u>', '<C-u>zz', opts)
 keymap.set('n', '<C-d>', '<C-d>zz', opts)
 
--- keymap.set('n', 'dd', function()
---   print(vim.api.nvim_get_current_line())
---   if vim.api.nvim_get_current_line():match("^\\s*$") then
---     return '"_dd'
---   else
---     return 'dd'
---   end
--- end, {expr = true})
+keymap.set('n', 'dd', function()
+  if vim.api.nvim_get_current_line():match("^%s*$") then
+    return '"_dd'
+  else
+    return 'dd'
+  end
+end, { expr = true })
 
 -- keymap.set('i', '{', '{}<Esc>ha', opts);
 -- keymap.set('i', '[', '[]<Esc>ha', opts);
