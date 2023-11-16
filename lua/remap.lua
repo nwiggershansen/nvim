@@ -21,7 +21,7 @@ keymap.set('n', '<C-d>', '<C-d>zz', opts)
 --   else
 --     return 'dd'
 --   end
--- end, opts)
+-- end, {expr = true})
 
 -- keymap.set('i', '{', '{}<Esc>ha', opts);
 -- keymap.set('i', '[', '[]<Esc>ha', opts);
@@ -92,16 +92,16 @@ keymap.set("n", "J", "mzJ`z")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 
-keymap.set({"n", "v"}, '<leader>d', '"_d')
+keymap.set({ "n", "v" }, '<leader>d', '"_d')
 
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Disable arrow keys
-keymap.set({'n', 'i'}, '<Left>', '<Nop>')
-keymap.set({'n', 'i'}, '<Right>', '<Nop>')
-keymap.set({'n', 'i'}, '<Up>', '<Nop>')
-keymap.set({'n', 'i'}, '<Down>', '<Nop>')
+keymap.set({ 'n', 'i' }, '<Left>', '<Nop>')
+keymap.set({ 'n', 'i' }, '<Right>', '<Nop>')
+keymap.set({ 'n', 'i' }, '<Up>', '<Nop>')
+keymap.set({ 'n', 'i' }, '<Down>', '<Nop>')
 
 keymap.set('n', '<leader>qq', '<cmd>qa<CR>')
 keymap.set('n', '<leader>QQ', '<cmd>qa!<CR>')
@@ -112,5 +112,4 @@ keymap.set('n', '<leader>ri(', '"_di(P')
 keymap.set('n', '<leader>ri[', '"_di[P')
 keymap.set('n', '<leader>ri\'', '"_di\'P')
 
-keymap.set({'n', 'i'}, '<C-c>', '<cmd>q<CR>')
-
+keymap.set({ 'n', 'i' }, '<C-c>', '<cmd>q<CR>')
