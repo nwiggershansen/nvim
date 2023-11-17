@@ -42,7 +42,8 @@ require('lspconfig').yamlls.setup(config({
   settings = {
     yaml = {
       schemas = {
-        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = "*azure-pipelines*.yml",
+        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] =
+        "*azure-pipelines*.yml",
         ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*"
       }
     }
@@ -50,5 +51,16 @@ require('lspconfig').yamlls.setup(config({
 }, nil))
 
 require('lspconfig').bicep.setup(config({ cmd = { bicep_command }, capabilities = capabilities }, nil))
+
+require('lspconfig').rust_analyzer.setup(config({
+  capabilities = capabilities,
+  settings = {
+    ['rust-analyzer'] = {
+      cargo = {
+        allFeatures = true
+      }
+    }
+  }
+}))
 
 require('symbols-outline').setup()
