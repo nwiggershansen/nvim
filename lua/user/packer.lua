@@ -24,11 +24,7 @@ return require('lazy').setup({
   'rose-pine/neovim',
   'liuchengxu/space-vim-dark',
   'cseelus/vim-colors-lucid',
-  'dracula/vim',
-  'miikanissi/modus-themes.nvim',
   'hzchirs/vim-material',
-  'sonph/onehalf',
-  'sainnhe/edge',
 
   --   'KaptajnenGaming/themelas.nvim'
 
