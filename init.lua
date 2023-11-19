@@ -10,6 +10,9 @@ require('user.snippets')
 require('user.barbar')
 require('user.dap')
 
+require('statusline.colors').set_hl()
+require('statusline')
+
 vim.opt.wildignore:append { '*.meta' }
 
 vim.g.ale_linters = {
@@ -23,8 +26,6 @@ vim.g.ale_sign_info = '·'
 vim.g.ale_sign_style_error = '·'
 vim.g.ale_sign_style_warning = '·'
 
-vim.g.airline_powerline_fonts = 1
-
 vim.opt.updatetime = 50
 
 vim.g.netrw_list_hide = '.*\\.meta$,.*\\.unity'
@@ -32,3 +33,6 @@ vim.opt.termguicolors = true
 
 vim.opt.wrap = true
 vim.opt.linebreak = true
+
+-- Sets a screen-wide statusline, instead of per buffer
+vim.opt.laststatus = 3

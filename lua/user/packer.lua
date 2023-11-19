@@ -26,16 +26,6 @@ return require('lazy').setup({
   'cseelus/vim-colors-lucid',
   'hzchirs/vim-material',
 
-  --   'KaptajnenGaming/themelas.nvim'
-
-  -- Personal theme
-  --  'H:/workspace/themelas'
-
-  -- Status line
-  'vim-airline/vim-airline-themes',
-  'vim-airline/vim-airline',
-  -- 'nvim-lualine/lualine.nvim',
-
   -- All of it
   'neovim/nvim-lspconfig',
   'nvim-lua/plenary.nvim',

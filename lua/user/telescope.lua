@@ -53,6 +53,12 @@ else
 end
 
 telescope.setup {
-  defaults = { file_ignore_patterns = { '.meta', '.unity' } },
+  defaults = {
+   file_ignore_patterns = { '.meta', '.unity' },
+    preview = {
+      hide_on_startup = true
+    }
+  },
   pickers = pickers,
+
 }
