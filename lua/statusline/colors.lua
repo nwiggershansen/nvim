@@ -21,7 +21,11 @@ M.set_hl = function()
 
   highlight('Spacer', { bg = M.get_hl 'St_NormalMode'.background })
   highlight('LspClient', { bg = M.get_hl 'St_NormalMode'.background })
-  highlight('Treesitter', { fg = '#32CD32', bg = M.get_hl 'St_NormalMode'.background })
+  highlight('AltSpacer', { bg = '#565f89' })
+  highlight('Treesitter', { fg = '#32CD32', bg = '#565f89' })
+  highlight('St_cwd_icon', { bg = '#f7768e' })
+  highlight('St_cwd_text', { bg = '#565f89' })
+  highlight('St_cwd_sep', { fg = '#f7768e' })
 end
 
 M.get_hl = function(name)

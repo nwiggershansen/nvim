@@ -1,6 +1,16 @@
 local M = {}
 local fn = vim.fn
 
+local default_sep_icons = {
+  default = { left = "", right = "" },
+  round = { left = "", right = "" },
+  block = { left = "█", right = "█" },
+  arrow = { left = "", right = "" },
+}
+
+local separators = default_sep_icons["default"]
+local sep_l = separators["left"]
+
 local modes = require('statusline.colors').modes
 local icon = '  '
 local devicons_present, devicons = pcall(require, 'nvim-web-devicons')
@@ -14,6 +24,10 @@ end
 
 M.Spacer = function()
   return table.concat { '%#Spacer# ' }
+end
+
+M.AltSpacer = function()
+  return table.concat { '%#AltSpacer# ' }
 end
 
 M.FileInfo = function()
@@ -79,7 +93,7 @@ M.LSP_status = function()
     end
 
     if next(client_names) then
-      return (vim.o.columns > 100 and '%#LspClient#' .. '  ' .. table.concat(client_names, ', ') .. ' ')
+      return (vim.o.columns > 100 and '%#LspClient#' .. '   ~ ' .. table.concat(client_names, ', ') .. ' ')
     end
   end
   return ''
@@ -90,6 +104,12 @@ M.Treesitter = function()
     return '%#Treesitter#' .. ' '
   end
   return ''
+end
+
+M.cwd = function()
+  local dir_icon = "%#St_cwd_icon#" .. "󰉋 "
+  local dir_name = "%#St_cwd_text#" .. " " .. fn.fnamemodify(fn.getcwd(), ":t") .. " "
+  return (vim.o.columns > 85 and ("%#St_cwd_sep#" .. sep_l .. dir_icon .. dir_name)) or ""
 end
 
 return M
