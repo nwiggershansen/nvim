@@ -4,6 +4,10 @@ local highlight = function(color, opts)
   vim.api.nvim_set_hl(0, color, opts)
 end
 
+M.get_hl = function(name)
+  return vim.api.nvim_get_hl_by_name(name, {})
+end
+
 M.set_hl = function()
   highlight('St_NormalMode', { fg = '#32CD32', bold = true })
   highlight('St_InsertMode', { fg = '#FF7518', bold = true })
@@ -13,7 +17,6 @@ M.set_hl = function()
   highlight('St_TerminalMode', { fg = '#F4BB44', bold = true })
   highlight('St_NTerminalMode', { fg = '#93C572', bold = true })
   highlight('St_CurrentFile', { fg = '#00BFFF', bold = true })
-  highlight('St_AlternateFile', { fg = '#20B2AA', bold = true })
 
   highlight('St_git_add', { fg = '#32CD32' })
   highlight('St_git_change', { fg = '#FF7518' })
@@ -23,13 +26,9 @@ M.set_hl = function()
   highlight('LspClient', { bg = M.get_hl 'St_NormalMode'.background })
   highlight('AltSpacer', { bg = '#565f89' })
   highlight('Treesitter', { fg = '#32CD32', bg = '#565f89' })
-  highlight('St_cwd_icon', { bg = '#f7768e' })
+  highlight('St_cwd_icon', { bg = '#f7768e', fg = '#333333' })
   highlight('St_cwd_text', { bg = '#565f89' })
   highlight('St_cwd_sep', { fg = '#f7768e' })
-end
-
-M.get_hl = function(name)
-  return vim.api.nvim_get_hl_by_name(name, {})
 end
 
 M.modes = {
