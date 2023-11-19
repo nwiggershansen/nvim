@@ -28,20 +28,6 @@ M.FileInfo = function()
   return table.concat { '%#St_CurrentFile#', icon, ' ', filename, ' ' }
 end
 
-M.AlternateFile = function()
-  local filename = (fn.expand '#' == '' and 'Empty') or fn.expand '#:t'
-
-  if (fn.bufnr '#' ~= fn.bufnr '%') and (filename ~= 'Empty') then
-    if devicons_present then
-      icon = M.GetFileIcon(filename)
-    end
-
-    return table.concat { '%#St_AlternateFile#', '#', icon, ' ', filename, ' ' }
-  end
-
-  return ' '
-end
-
 M.GetFileIcon = function(filename)
   local ft_icon = devicons.get_icon(filename)
 

@@ -65,6 +65,8 @@ return require('lazy').setup({
 
   -- Git
   'tpope/vim-fugitive',
+  'lewis6991/gitsigns.nvim',
+
 
   -- Showing cross-file diagnostics
   'folke/trouble.nvim',
