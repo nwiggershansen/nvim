@@ -51,7 +51,12 @@ nvimtree.setup({
   },
   filters = {
     custom = { ".meta$", ".unity$", ".git/*" }
-  }
+  },
+  on_attach = function(bufnr)
+    nvimtreeapi.config.mappings.default_on_attach(bufnr)
+
+    vim.keymap.set('n', '<C-k>', '<C-W>k', { buffer = bufnr })
+  end,
 })
 
 nvimtreeapi.tree.toggle_gitignore_filter()
