@@ -89,7 +89,9 @@ M.LSP_status = function()
   if rawget(vim, 'lsp') then
     local client_names = {}
     for _, client in ipairs(vim.lsp.get_active_clients()) do
-      table.insert(client_names, client.name)
+      if table[client.name] == nil then
+        table.insert(client_names, client.name)
+      end
     end
 
     if next(client_names) then
