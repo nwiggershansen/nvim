@@ -105,10 +105,9 @@ keymap.set({ 'n', 'i' }, '<Down>', '<Nop>')
 keymap.set('n', '<leader>qq', '<cmd>qa<CR>')
 keymap.set('n', '<leader>QQ', '<cmd>qa!<CR>')
 
-keymap.set('n', '<leader>ri"', '"_di"P')
-keymap.set('n', '<leader>ri{', '"_di{P')
-keymap.set('n', '<leader>ri(', '"_di(P')
-keymap.set('n', '<leader>ri[', '"_di[P')
-keymap.set('n', '<leader>ri\'', '"_di\'P')
+local replacable = { '"', '\'', '(', ')', '{', '}', '[', ']', '<', '>', '`' }
+for _, v in ipairs(replacable) do
+  keymap.set('n', '<leader>ri' .. v, '"_di' .. v .. 'P')
+end
 
 keymap.set({ 'n', 'i' }, '<C-c>', '<cmd>q<CR>')
