@@ -8,7 +8,7 @@ local pickers = {}
 
 if vim.fn.has "unix" == 1 then
   local grep_args = { '--no-ignore', '--hidden', '-g', '!**/.git/*', '-g', '!**/node_modules/*', '-g', '!*.lock', '-g',
-    '!**/Temp/*' }
+    '!**/Temp/*', '-g', '!**/dist/*' }
 
   pickers = {
     live_grep = {
@@ -26,7 +26,7 @@ if vim.fn.has "unix" == 1 then
   pickers = vim.tbl_deep_extend("force", pickers, {
     find_files = {
       find_command = { 'rg', '--files', '--no-ignore', '--hidden', '-g', '!**/.git/*', '-g', '!**/node_modules/*', '-g',
-        '!*.lock', '-g', '!**/Temp/*' }
+        '!*.lock', '-g', '!**/Temp/*', '-g', '!**/dist/*' }
     },
   })
 else
@@ -54,7 +54,7 @@ end
 
 telescope.setup {
   defaults = {
-   file_ignore_patterns = { '.meta', '.unity' },
+    file_ignore_patterns = { '.meta', '.unity' },
     preview = {
       hide_on_startup = true
     }

@@ -111,3 +111,6 @@ for _, v in ipairs(replacable) do
 end
 
 keymap.set({ 'n', 'i' }, '<C-c>', '<cmd>q<CR>')
+
+keymap.set('n', '<leader>no', '<cmd>NvimTreeOpen<CR>')
+keymap.set('n', '<leader>nc', '<cmd>NvimTreeClose<CR>')
