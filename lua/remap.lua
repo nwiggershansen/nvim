@@ -90,6 +90,7 @@ keymap.set("n", "J", "mzJ`z")
 -- Keep search terms in center
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
+keymap.set("n", "%", "%zz")
 
 keymap.set({ "n", "v" }, '<leader>d', '"_d')
 
