@@ -18,7 +18,7 @@ elseif vim.fn.has "win32" == 1 then
     shell = "cmd.exe"
   })
 
-  vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>', '<cmd>:1ToggleTerm direction=float<CR>')
+  vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>1', '<cmd>:1ToggleTerm direction=float<CR>')
   vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>2', '<cmd>:2ToggleTerm<CR>')
   vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>3', '<cmd>:3ToggleTerm<CR>')
 else
