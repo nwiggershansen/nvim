@@ -115,3 +115,7 @@ keymap.set({ 'n', 'i' }, '<C-c>', '<cmd>q<CR>')
 
 keymap.set('n', '<leader>no', '<cmd>NvimTreeOpen<CR>')
 keymap.set('n', '<leader>nc', '<cmd>NvimTreeClose<CR>')
+
+-- Cool macro shit
+keymap.set('n', 'Q', '@qj')
+keymap.set('x', 'Q', '<cmd>norm @q<CR>')
