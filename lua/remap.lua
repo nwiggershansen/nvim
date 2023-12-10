@@ -119,3 +119,6 @@ keymap.set('n', '<leader>nc', '<cmd>NvimTreeClose<CR>')
 -- Cool macro shit
 keymap.set('n', 'Q', '@qj')
 keymap.set('x', 'Q', '<cmd>norm @q<CR>')
+
+-- Yank whole file
+keymap.set('n', '<leader>ay', '<cmd>y<CR>')
