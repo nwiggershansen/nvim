@@ -54,7 +54,7 @@ end
 
 telescope.setup {
   defaults = {
-    file_ignore_patterns = { '.meta', '.unity' },
+    file_ignore_patterns = { '.meta', '.unity', '.prefab', '.anim' },
     preview = {
       hide_on_startup = true
     }

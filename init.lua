@@ -27,13 +27,6 @@ vim.g.ale_sign_info = '·'
 vim.g.ale_sign_style_error = '·'
 vim.g.ale_sign_style_warning = '·'
 
-vim.opt.updatetime = 50
 
 vim.g.netrw_list_hide = '.*\\.meta$,.*\\.unity'
-vim.opt.termguicolors = true
 
-vim.opt.wrap = true
-vim.opt.linebreak = true
-
--- Sets a screen-wide statusline, instead of per buffer
-vim.opt.laststatus = 3

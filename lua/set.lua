@@ -10,9 +10,16 @@ vim.opt.incsearch = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
-
+vim.opt.wrap = true
+-- vim.opt.linebreak = true
+--
 vim.g.mapleader = " "
+
+vim.opt.updatetime = 50
+vim.opt.termguicolors = true
+
+-- Sets a screen-wide statusline, instead of per buffer
+vim.opt.laststatus = 3
 
 -- Hides the diagnostic event to the right of the issue
 -- vim.diagnostic.config({ virtual_text = false, signs = true, float = { border = "single" }, })
