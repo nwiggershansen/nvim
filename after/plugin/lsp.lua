@@ -1,5 +1,6 @@
 local base_config = require('user.base_config')
 local status, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+local lspconfig = require('lspconfig')
 
 if not status then
   return
@@ -7,6 +8,8 @@ end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 local bicep_command = base_config.mason_path .. "bin/bicep-lsp"
+
+local servers = { "tailwindcss", "cssls", "html", "bashls" }
 
 local function config(_config, func)
   return vim.tbl_deep_extend("force", {
@@ -19,7 +22,11 @@ local function config(_config, func)
   }, _config or {})
 end
 
-require('lspconfig').jsonls.setup(config({
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup(config({ capabilities = capabilities }, nil))
+end
+
+lspconfig.jsonls.setup(config({
   capabilities = capabilities,
   settings = {
     json = {
@@ -29,15 +36,7 @@ require('lspconfig').jsonls.setup(config({
   }
 }, nil))
 
-require('lspconfig').tailwindcss.setup(config({ capabilities = capabilities }, nil))
-
-require('lspconfig').cssls.setup(config({ capabilities = capabilities }, nil))
-
-require('lspconfig').html.setup(config({ capabilities = capabilities }, nil))
-
-require('lspconfig').bashls.setup(config({ capabilities = capabilities }, nil))
-
-require('lspconfig').yamlls.setup(config({
+lspconfig.yamlls.setup(config({
   capabilities = capabilities,
   settings = {
     yaml = {
@@ -50,9 +49,9 @@ require('lspconfig').yamlls.setup(config({
   }
 }, nil))
 
-require('lspconfig').bicep.setup(config({ cmd = { bicep_command }, capabilities = capabilities }, nil))
+lspconfig.bicep.setup(config({ cmd = { bicep_command }, capabilities = capabilities }, nil))
 
-require('lspconfig').rust_analyzer.setup(config({
+lspconfig.rust_analyzer.setup(config({
   capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
