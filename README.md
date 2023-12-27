@@ -1,11 +1,15 @@
 <div align="center">
 
-[![Neovim Version](https://img.shields.io/badge/Neovim-0.9.0-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim)
-[![Windows Version](https://img.shields.io/badge/Windows 10.svg?style=flat-square&logo=windows10&color=0078D6&logoColor=white)]
-[![Ubuntu Version](https://img.shields.io/badge/Ubuntu 22.04.svg?style=flat-square&logo=ubuntu&color=E95420&logoColor=white)]
-
+[![Neovim Version](https://img.shields.io/badge/Neovim-0.9.x-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim)
+![Windows Version](https://img.shields.io/badge/Windows_10-0078D6?logo=windows10&logoColor=white) 
+![Ubuntu Version](https://img.shields.io/badge/Ubuntu_22.04-E95420?logo=ubuntu&logoColor=white)
 
 </div> 
 
+## Languages  
+<div align="center">
 
+![C#](https://img.shields.io/badge/CSharp-512BD4?logo=CSharp&logoColor=white) 
+![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?logo=javascript&logoColor=white) ![Typescript](https://img.shields.io/badge/Typescript-3178C6?logo=typescript&logoColor=white)
 
+</div>
