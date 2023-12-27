@@ -1,11 +1,11 @@
+<div align="center">
 
-#### Nvim configuration
+[![Neovim Version](https://img.shields.io/badge/Neovim-0.9.0-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim)
+[![Windows Version](https://img.shields.io/badge/Windows 10.svg?style=flat-square&logo=windows10&color=0078D6&logoColor=white)]
+[![Ubuntu Version](https://img.shields.io/badge/Ubuntu 22.04.svg?style=flat-square&logo=ubuntu&color=E95420&logoColor=white)]
 
-To enable mouse settings in cmder, go to `Settings` -> `Mouse`, then in `Mouse Options`, enable `Send mouse events to console`
 
-## Java setup required
+</div> 
 
- 1. Make sure you have a recent version of the jdk downloaded and set up 
- 1. If on Windows, make sure the java location is in the PATH environment variable
- 1. Download `https://github.com/microsoft/java-debug` and run `mwvn clean install` 
- 1. Download `https://github.com/microsoft/vscode-java-test` and run `npm i` && `npm run build-plugin`
+
+
