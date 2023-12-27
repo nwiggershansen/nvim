@@ -62,4 +62,3 @@ lspconfig.rust_analyzer.setup(config({
   }
 }))
 
-require('symbols-outline').setup()
