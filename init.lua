@@ -12,6 +12,7 @@ require('user.barbar')
 require('user.dap')
 require('gitsigns').setup()
 
+require('ftdetect.filetypes')
 require('statusline.colors').set_hl()
 require('statusline')
 

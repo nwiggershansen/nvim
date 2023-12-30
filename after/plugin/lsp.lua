@@ -26,6 +26,7 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup(config({ capabilities = capabilities }, nil))
 end
 
+
 lspconfig.jsonls.setup(config({
   capabilities = capabilities,
   settings = {
@@ -61,4 +62,3 @@ lspconfig.rust_analyzer.setup(config({
     }
   }
 }))
-
