@@ -18,9 +18,9 @@ return require('lazy').setup({
   "EdenEast/nightfox.nvim",
   "rebelot/kanagawa.nvim",
   'navarasu/onedark.nvim',
-  { "catppuccin/nvim", as = "catppuccin" },
+  'catppuccin/nvim',
   'rmehri01/onenord.nvim',
-  { 'nordtheme/vim',   as = "nordtheme" },
+  'nordtheme/vim',
   'rose-pine/neovim',
   'liuchengxu/space-vim-dark',
   'cseelus/vim-colors-lucid',
@@ -99,7 +99,7 @@ return require('lazy').setup({
 
   -- DAP (Debug Adapter Protocol)
   'mfussenegger/nvim-dap',
-  { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } },
+  { 'rcarriga/nvim-dap-ui', dependencies = { 'mfussenegger/nvim-dap' } },
 
   -- Marker jumping
   'ThePrimeagen/harpoon',
