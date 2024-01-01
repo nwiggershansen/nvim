@@ -20,4 +20,6 @@ end
 
 treesitter_context.setup()
 
-
+if vim.fn.has "win32" == 1 then
+  require 'nvim-treesitter.install'.compilers = { "zig" }
+end
