@@ -22,13 +22,6 @@ keymap.set('n', 'dd', function()
   end
 end, { expr = true })
 
--- keymap.set('i', '{', '{}<Esc>ha', opts);
--- keymap.set('i', '[', '[]<Esc>ha', opts);
--- keymap.set('i', '(', '()<Esc>ha', opts);
--- keymap.set('i', '"', '""<Esc>ha', opts);
--- keymap.set('i', '\'', '\'\'<Esc>ha', opts);
--- keymap.set('i', '`', '``<Esc>ha', opts);
-
 keymap.set('n', '<S-Tab>', '<<')
 keymap.set('i', '<S-Tab>', '<Esc><<hi')
 keymap.set('v', '<S-Tab>', '<gv')
@@ -73,7 +66,7 @@ keymap.set('n', "<leader>tn", "<cmd>tabn<CR>")          -- Go to next tab
 keymap.set('n', "<leader>tp", "<cmd>tabp<CR>")          -- Go to previous tab
 
 keymap.set('n', "<leader>e", "<cmd>NvimTreeToggle<CR>") -- Toggles file viewer
-keymap.set('n', "<leader>rs", "<cmd>:LspRestart<CR>")   -- Restarts lsp
+keymap.set('n', "<leader>rs", "<cmd>LspRestart<CR>")    -- Restarts lsp
 
 -- Resize buffer without having to do count
 keymap.set("n", "<C-w><", "10<C-w><", opts)
