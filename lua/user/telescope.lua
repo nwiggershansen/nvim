@@ -3,8 +3,8 @@ if not status then
   return
 end
 
+local actions = require("telescope.actions")
 local pickers = {}
-
 
 if vim.fn.has "unix" == 1 then
   local grep_args = { '--no-ignore', '--hidden', '-g', '!**/.git/*', '-g', '!**/node_modules/*', '-g', '!*.lock', '-g',
@@ -57,6 +57,11 @@ telescope.setup {
     file_ignore_patterns = { '.meta', '.unity', '.prefab', '.anim' },
     preview = {
       hide_on_startup = true
+    },
+    mappings = {
+      n = {
+        ["<C-c>"] = actions.close
+      }
     }
   },
   pickers = pickers,
