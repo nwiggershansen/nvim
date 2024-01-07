@@ -7,7 +7,10 @@ end
 nvim_treesitter.setup {
   ensure_installed = { 'javascript', 'typescript', 'tsx', 'bash', 'dockerfile', 'lua', 'bicep' },
   highlight = {
-    enable = true
+    enable = true,
+    disable = function(_, bufnr)
+      return vim.api.nvim_buf_line_count(bufnr) > 50000
+    end
   },
   sync_install = false,
 }
