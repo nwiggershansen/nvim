@@ -42,7 +42,7 @@ require('lspconfig').omnisharp.setup({
     vim.keymap.set('n', '<C-f>', '<cmd>OmniSharpCodeFormat<CR>', opts)
     vim.keymap.set('n', '<leader>fm', '<cmd>OmniSharpCodeFormat<CR>', opts)
     vim.keymap.set('n', '<leader>sh', '<cmd>OmniSharpSignatureHelp<CR>', opts)
-    vim.keymap.set('n', '<leader>gi', '<cmd>OmniSharpFindImplementations<CR>', opts)
     vim.keymap.set('n', '<leader>fu', '<cmd>OmniSharpFindUsages<CR>', opts)
+    vim.keymap.set('n', 'gi', '<cmd>OmniSharpFindImplementations<CR>', opts)
   end
 })
