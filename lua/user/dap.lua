@@ -1,7 +1,6 @@
 local dap, dapui = require('dap'), require('dapui')
 local base_path = vim.fn.stdpath("data") .. "/third-party/"
 
-
 local home = os.getenv "HOME"
 local netcoredbg = ""
 
@@ -101,6 +100,7 @@ dapui.setup({
 })
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
+  vim.cmd('NvimTreeClose')
   dapui.open()
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
@@ -108,4 +108,5 @@ dap.listeners.before.event_terminated["dapui_config"] = function()
 end
 dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
+  vim.cmd('NvimTreeOpen')
 end
