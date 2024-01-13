@@ -4,11 +4,14 @@ if not status then
   return
 end
 
+require("luasnip.loaders.from_vscode").lazy_load()
+
 -- Shorthands --
 local snippet = ls.s
 local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
+
 
 ls.config.set_config({
   history = true,
@@ -91,6 +94,13 @@ vim.keymap.set({ "i", "s" }, "<C-k>", function()
     ls.expand_or_jump()
   end
 end, { silent = true })
+
+vim.keymap.set({ "i", "s" }, "<tab>", function()
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
+end, { silent = true })
+
 
 vim.keymap.set({ "i", "s" }, "<C-j>", function()
   if ls.jumpable(-1) then

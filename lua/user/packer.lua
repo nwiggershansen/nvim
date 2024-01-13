@@ -56,7 +56,7 @@ return require('lazy').setup({
   'saadparwaiz1/cmp_luasnip',
 
   -- Snippets
-  'L3MON4D3/LuaSnip',
+  { 'L3MON4D3/LuaSnip',        dependencies = { "rafamadriz/friendly-snippets" } },
 
   -- Icons for completion floating window
   'onsails/lspkind.nvim',
