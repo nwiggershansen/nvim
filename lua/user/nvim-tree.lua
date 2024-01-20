@@ -27,7 +27,7 @@ vim.g.loaded_netrwPlugin = 1
 
 nvimtree.setup({
   renderer = {
-    highlight_git = true,
+    highlight_git = "name",
     icons = {
       glyphs = {
         git = {
