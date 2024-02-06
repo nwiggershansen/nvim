@@ -33,6 +33,8 @@ end
 
 require('lspconfig').omnisharp.setup({
   cmd = omnisharp_cmd,
+  enable_roslyn_analyzers = true,
+  organize_imports_on_format = true,
   capabilities = capabilities,
   handlers = {
     ["textDocument/definition"] = require('omnisharp_extended').handler
