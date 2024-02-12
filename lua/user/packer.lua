@@ -15,8 +15,8 @@ return require('lazy').setup({
   -- Themes
   'folke/tokyonight.nvim',
   'marko-cerovac/material.nvim',
-  "EdenEast/nightfox.nvim",
-  "rebelot/kanagawa.nvim",
+  'EdenEast/nightfox.nvim',
+  'rebelot/kanagawa.nvim',
   'navarasu/onedark.nvim',
   'catppuccin/nvim',
   'rmehri01/onenord.nvim',
@@ -25,7 +25,7 @@ return require('lazy').setup({
   'liuchengxu/space-vim-dark',
   'cseelus/vim-colors-lucid',
   'hzchirs/vim-material',
-
+  'pauchiner/pastelnight.nvim',
   -- All of it
   'neovim/nvim-lspconfig',
   'nvim-lua/plenary.nvim',
