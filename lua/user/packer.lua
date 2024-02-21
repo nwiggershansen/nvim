@@ -33,7 +33,8 @@ return require('lazy').setup({
   'simrat39/symbols-outline.nvim',
 
   -- Fuzzy finder
-  'nvim-telescope/telescope.nvim',
+  { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-telescope/telescope-ui-select.nvim' } },
+  'nvim-telescope/telescope-ui-select.nvim',
 
   -- LSP installer
   'williamboman/mason.nvim',
@@ -56,7 +57,7 @@ return require('lazy').setup({
   'saadparwaiz1/cmp_luasnip',
 
   -- Snippets
-  { 'L3MON4D3/LuaSnip',        dependencies = { "rafamadriz/friendly-snippets" } },
+  { 'L3MON4D3/LuaSnip',              dependencies = { "rafamadriz/friendly-snippets" } },
 
   -- Icons for completion floating window
   'onsails/lspkind.nvim',
