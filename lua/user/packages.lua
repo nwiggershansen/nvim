@@ -119,5 +119,19 @@ return require('lazy').setup({
   },
 
   -- JSON Schema store
-  'b0o/schemastore.nvim'
+  'b0o/schemastore.nvim',
+
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile"
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim"
+    }
+  }
 })

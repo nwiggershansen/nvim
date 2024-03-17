@@ -1,5 +1,5 @@
 require('set')
-require('user.packer')
+require('user.packages')
 
 require('remap')
 
