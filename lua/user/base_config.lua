@@ -19,6 +19,7 @@ local base_keymaps = function()
   vim.keymap.set('n', 'gr', function() vim.lsp.buf.references() end, opts)
   vim.keymap.set('n', 'gi', function() vim.lsp.buf.go_to_implementation() end, opts)
   vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
+  vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end, opts)
 end
 
 M.keymap = base_keymaps
