@@ -7,8 +7,12 @@ elseif vim.fn.has "unix" == 1 then
     close_on_exit = true,
     auto_scroll = true,
     terminal_mappings = true,
-    shell = "teminator"
+    shell = "bash"
   })
+
+  vim.keymap.set({ 'n', 'i', 't' }, '<leader>1', '<cmd>:1ToggleTerm direction=float<CR>')
+  vim.keymap.set({ 'n', 'i', 't' }, '<leader>2', '<cmd>:2ToggleTerm<CR>')
+  vim.keymap.set({ 'n', 'i', 't' }, '<leader>3', '<cmd>:3ToggleTerm<CR>')
 elseif vim.fn.has "win32" == 1 then
   toggleterm.setup({
     start_in_insert = true,
@@ -18,8 +22,7 @@ elseif vim.fn.has "win32" == 1 then
     shell = "cmd.exe"
   })
 
-  vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>1', '<cmd>:1ToggleTerm direction=float<CR>')
-  vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>2', '<cmd>:2ToggleTerm<CR>')
-  vim.keymap.set({ 'n', 'i', 't' }, '<C-\\>3', '<cmd>:3ToggleTerm<CR>')
-else
+  vim.keymap.set({ 'n', 'i', 't' }, '<leader>1', '<cmd>:1ToggleTerm direction=float<CR>')
+  vim.keymap.set({ 'n', 'i', 't' }, '<leader>2', '<cmd>:2ToggleTerm<CR>')
+  vim.keymap.set({ 'n', 'i', 't' }, '<leader>3', '<cmd>:3ToggleTerm<CR>')
 end
