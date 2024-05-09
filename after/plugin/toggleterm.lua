@@ -10,9 +10,9 @@ elseif vim.fn.has "unix" == 1 then
     shell = "bash"
   })
 
-  vim.keymap.set({ 'n', 'i', 't' }, '<leader>1', '<cmd>:1ToggleTerm direction=float<CR>')
-  vim.keymap.set({ 'n', 'i', 't' }, '<leader>2', '<cmd>:2ToggleTerm<CR>')
-  vim.keymap.set({ 'n', 'i', 't' }, '<leader>3', '<cmd>:3ToggleTerm<CR>')
+  vim.keymap.set({ 'n' }, '<leader>1', '<cmd>:1ToggleTerm direction=float<CR>')
+  vim.keymap.set({ 'n' }, '<leader>2', '<cmd>:2ToggleTerm<CR>')
+  vim.keymap.set({ 'n' }, '<leader>3', '<cmd>:3ToggleTerm<CR>')
 elseif vim.fn.has "win32" == 1 then
   toggleterm.setup({
     start_in_insert = true,
@@ -22,7 +22,7 @@ elseif vim.fn.has "win32" == 1 then
     shell = "cmd.exe"
   })
 
-  vim.keymap.set({ 'n', 'i', 't' }, '<leader>1', '<cmd>:1ToggleTerm direction=float<CR>')
-  vim.keymap.set({ 'n', 'i', 't' }, '<leader>2', '<cmd>:2ToggleTerm<CR>')
-  vim.keymap.set({ 'n', 'i', 't' }, '<leader>3', '<cmd>:3ToggleTerm<CR>')
+  vim.keymap.set({ 'n' }, '<leader>1', '<cmd>:1ToggleTerm direction=float<CR>')
+  vim.keymap.set({ 'n' }, '<leader>2', '<cmd>:2ToggleTerm<CR>')
+  vim.keymap.set({ 'n' }, '<leader>3', '<cmd>:3ToggleTerm<CR>')
 end
