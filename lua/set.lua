@@ -3,6 +3,9 @@ vim.opt.relativenumber = true
 
 vim.opt.inccommand = "split"
 
+vim.opt.smartcase = true
+vim.opt.ignorecase = true
+
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
@@ -19,7 +22,6 @@ vim.g.mapleader = " "
 
 vim.opt.updatetime = 50
 vim.opt.termguicolors = true
-
 
 -- Sets a screen-wide statusline, instead of per buffer
 vim.opt.laststatus = 3
