@@ -119,3 +119,5 @@ keymap.set('n', '<leader>ay', '<cmd>%y<CR>')
 keymap.set('n', '<leader>qf', '<cmd>copen<CR>')
 
 keymap.set('n', '<leader>lg', '<cmd>LazyGit<CR>')
+
+keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
