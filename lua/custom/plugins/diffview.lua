@@ -1,5 +1,5 @@
 return {
   {
-    'dense-analysis/ale',
+    'sindrets/diffview.nvim'
   },
 }
