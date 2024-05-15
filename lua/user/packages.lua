@@ -83,8 +83,8 @@ return require('lazy').setup({
   -- Git diff view
   { 'sindrets/diffview.nvim' },
 
-  -- Formatting helper for nonlsp
-  'jose-elias-alvarez/null-ls.nvim',
+  -- Formatting helper
+  'stevearc/conform.nvim',
 
   -- Allows removing/adding surrounds
   'tpope/vim-surround',
