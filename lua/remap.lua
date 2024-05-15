@@ -1,15 +1,5 @@
-local status, builtin = pcall(require, 'telescope.builtin')
-
 local keymap = vim.keymap
 local opts = { remap = false }
-
-if status then
-  keymap.set('n', '<C-p>', builtin.find_files, opts)
-  keymap.set('n', '<leader>ff', builtin.find_files, opts)
-  keymap.set('n', '<leader>fg', builtin.live_grep, opts)
-  keymap.set('n', '<leader>fb', builtin.buffers, opts)
-  keymap.set('n', '<leader>fh', builtin.help_tags, opts)
-end
 
 keymap.set('n', '<C-u>', '<C-u>zz', opts)
 keymap.set('n', '<C-d>', '<C-d>zz', opts)
