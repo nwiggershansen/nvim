@@ -1,5 +1,7 @@
 local status, telescope = pcall(require, "telescope")
-if not status then
+local builtin_status, builtin = pcall(require, 'telescope.builtin')
+local opts = { remap = false }
+if not status or not builtin_status then
   return
 end
 
@@ -71,5 +73,11 @@ telescope.setup {
     }
   }
 }
+
+vim.keymap.set('n', '<C-p>', builtin.find_files, opts)
+vim.keymap.set('n', '<leader>ff', builtin.find_files, opts)
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, opts)
+vim.keymap.set('n', '<leader>fb', builtin.buffers, opts)
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, opts)
 
 require("telescope").load_extension("ui-select")
