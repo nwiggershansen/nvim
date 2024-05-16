@@ -103,6 +103,14 @@ keymap.set('n', '<leader>nc', '<cmd>NvimTreeClose<CR>')
 keymap.set('n', 'Q', '@qj')
 keymap.set('x', 'Q', '<cmd>norm @q<CR>')
 
+-- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+keymap.sen("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
+keymap.sen("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
+keymap.sen("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
+keymap.sen("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
+keymap.sen("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
+keymap.sen("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
+
 -- Yank whole file
 keymap.set('n', '<leader>ay', '<cmd>%y<CR>')
 

@@ -1,7 +1,7 @@
-require('settings')
+require('options')
 require('user.packages')
 
-require('remap')
+require('keymaps')
 
 require('ftdetect.filetypes')
 require('statusline.colors').set_hl()

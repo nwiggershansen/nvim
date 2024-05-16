@@ -80,7 +80,7 @@ M.LSP_Diagnostics = function()
   local errorsText = (errors and errors > 0) and ('%#DiagnosticError#' .. ' ' .. errors .. ' ') or ''
   local warningsText = (warnings and warnings > 0) and ('%#DiagnosticWarn#' .. ' ' .. warnings .. ' ') or ''
   local hintsText = (hints and hints > 0) and ('%#DiagnosticHint#' .. ' ' .. hints .. ' ') or ''
-  local infoText = (info and info > 0) and ('%#DiagnosticInfo#' .. ' ' .. info .. ' ') or ''
+  local infoText = (info and info > 0) and ('%#DiagnosticInfo#' .. ' ' .. info .. ' ') or ''
 
   return errorsText .. warningsText .. hintsText .. infoText
 end
