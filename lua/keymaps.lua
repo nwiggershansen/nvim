@@ -21,8 +21,14 @@ keymap.set('v', '<S-Tab>', '<gv')
 keymap.set('i', '<Tab>', '<Esc>>>hi')
 keymap.set('v', '<Tab>', '>gv')
 
-keymap.set('n', '<A-j>', '<cmd>m +1<CR>')
-keymap.set('n', '<A-k>', '<cmd>m -2<CR>')
+-- Move Lines
+keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
+keymap.set("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
+keymap.set("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+keymap.set("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+keymap.set("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
+keymap.set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
+
 keymap.set('x', '<leader>p', '"_dP')
 
 -- Yank into system clipboard
@@ -104,12 +110,12 @@ keymap.set('n', 'Q', '@qj')
 keymap.set('x', 'Q', '<cmd>norm @q<CR>')
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-keymap.sen("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
-keymap.sen("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
-keymap.sen("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
-keymap.sen("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
-keymap.sen("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
-keymap.sen("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
+keymap.set("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
+keymap.set("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
+keymap.set("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
+keymap.set("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
+keymap.set("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
+keymap.set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
 
 -- Yank whole file
 keymap.set('n', '<leader>ay', '<cmd>%y<CR>')
