@@ -125,3 +125,6 @@ keymap.set('n', '<leader>qf', '<cmd>copen<CR>')
 keymap.set('n', '<leader>lg', '<cmd>LazyGit<CR>')
 
 keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+
+-- Show/hide inlay hints
+vim.keymap.set('n', '<leader>h', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end)

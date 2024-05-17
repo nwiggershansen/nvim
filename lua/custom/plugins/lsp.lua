@@ -13,6 +13,7 @@ return {
       require "custom.lsp.lua_ls"
       require "custom.lsp.lemminx"
       require "custom.lsp.omnisharp"
+      require "custom.lsp.tsserver"
     end,
   },
 }
