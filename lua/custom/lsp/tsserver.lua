@@ -12,7 +12,7 @@ local inlay_hints = {
     includeInlayVariableTypeHints = false,
   },
 }
-require('lspconfig').lua_ls.setup({
+require('lspconfig').tsserver.setup({
   on_attach    = function()
     base_config.keymap()
   end,
