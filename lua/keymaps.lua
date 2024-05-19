@@ -118,13 +118,19 @@ keymap.set("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search
 keymap.set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
 
 -- Yank whole file
-keymap.set('n', '<leader>ay', '<cmd>%y<CR>')
+keymap.set('n', '<leader>ay', '<cmd>%y<CR>', { desc = "Yank whole file" })
 
 keymap.set('n', '<leader>qf', '<cmd>copen<CR>')
 
-keymap.set('n', '<leader>lg', '<cmd>LazyGit<CR>')
+keymap.set('n', '<leader>lg', '<cmd>LazyGit<CR>', { desc = "Open LazyGit" })
 
 keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 -- Show/hide inlay hints
 vim.keymap.set('n', '<leader>h', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end)
+
+-- Resize window using <ctrl> arrow keys
+keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
