@@ -5,8 +5,6 @@ local base_keymaps = function()
 
   vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set('n', '<F2>', function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set('n', '[d', function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set('n', ']d', function() vim.diagnostic.goto_prev() end, opts)
   vim.keymap.set('n', '[e', function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR }) end, opts)
   vim.keymap.set('n', ']e', function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR }) end, opts)
   vim.keymap.set('n', '[w', function() vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.WARNING }) end, opts)
