@@ -48,7 +48,6 @@
   "vim": { "branch": "main", "commit": "f13f5dfbb784deddbc1d8195f34dfd9ec73e2295" },
   "vim-bicep": { "branch": "master", "commit": "602439fbf6c3c497bd63d209dd6122768cf80794" },
   "vim-colors-lucid": { "branch": "master", "commit": "4efacf11f4bda195a4dd2612a87515a2ebd6b3a0" },
-  "vim-commentary": { "branch": "master", "commit": "c4b8f52cbb7142ec239494e5a2c4a512f92c4d07" },
   "vim-fugitive": { "branch": "master", "commit": "5a9bd42dd8dd127779f3cd8982a0419b7ca9c7f5" },
   "vim-material": { "branch": "master", "commit": "c2d01dcc40868d874acfe3fdbb24fb4a65096d6d" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" }
