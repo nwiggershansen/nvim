@@ -1,6 +1,9 @@
 return {
   {
     'neovim/nvim-lspconfig',
+    opts = {
+      inlay_hints = { enabled = true }
+    },
     dependencies = {
       'b0o/schemastore.nvim',
       -- C# specific
