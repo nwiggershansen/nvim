@@ -10,6 +10,7 @@ return {
       'OmniSharp/omnisharp-vim',
       'Hoffs/omnisharp-extended-lsp.nvim',
       'carlsmedstad/vim-bicep',
+      { "j-hui/fidget.nvim", opts = {} }
     },
     config = function()
       require "custom.lsp"
