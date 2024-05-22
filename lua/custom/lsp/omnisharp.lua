@@ -1,6 +1,5 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local base_config = require('user.base_config')
-local omnisharp_config = require("omnisharp_config")
 local mason_path = base_config.mason_path
 local opts = { remap = false, silent = true }
 
@@ -37,15 +36,8 @@ capabilities = vim.tbl_deep_extend("force", capabilities, {
   }
 })
 
-local omnisharp_cmd = { omnisharp_path }
-table.insert(omnisharp_cmd, '--languageserver')
-
-for _, v in pairs(omnisharp_config) do
-  table.insert(omnisharp_cmd, v)
-end
-
 require('lspconfig').omnisharp.setup({
-  cmd = omnisharp_cmd,
+  cmd = { omnisharp_path, '--languageserver' },
   organize_imports_on_format = true,
   capabilities = capabilities,
   handlers = {
