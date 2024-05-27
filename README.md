@@ -10,6 +10,7 @@
 <div align="center">
 
 ![C#](https://img.shields.io/badge/CSharp-512BD4?logo=CSharp&logoColor=white) 
-![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?logo=javascript&logoColor=white) ![Typescript](https://img.shields.io/badge/Typescript-3178C6?logo=typescript&logoColor=white)
+![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?logo=javascript&logoColor=white) 
+![Typescript](https://img.shields.io/badge/Typescript-3178C6?logo=typescript&logoColor=white)
 
 </div>
