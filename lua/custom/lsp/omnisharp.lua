@@ -14,8 +14,6 @@ vim.g.OmniSharp_highlight_groups = {
   Identifier = "@property"
 }
 
-vim.g.OmniSharp_server_use_net6 = 1
-
 local omnisharp_path = mason_path
 
 if vim.fn.has "mac" == 1 then
