@@ -13,8 +13,8 @@ local servers = { "tailwindcss", "cssls", "html", "bashls" }
 
 local function config(_config, func)
   return vim.tbl_deep_extend("force", {
-    on_attach = function()
-      base_config.keymap()
+    on_attach = function(_, bufnr)
+      base_config.keymap(bufnr)
       if (type(func) == 'function') then
         func()
       end

@@ -13,8 +13,8 @@ local inlay_hints = {
   },
 }
 require('lspconfig').tsserver.setup({
-  on_attach    = function()
-    base_config.keymap()
+  on_attach    = function(_, bufnr)
+    base_config.keymap(bufnr)
   end,
   capabilities = capabilities,
   settings = {

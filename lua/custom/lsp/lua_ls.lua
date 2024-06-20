@@ -12,8 +12,8 @@ else
 end
 
 require('lspconfig').lua_ls.setup({
-  on_attach    = function()
-    base_config.keymap()
+  on_attach    = function(_, bufnr)
+    base_config.keymap(bufnr)
   end,
   cmd          = { lua_bin_path },
   capabilities = capabilities,

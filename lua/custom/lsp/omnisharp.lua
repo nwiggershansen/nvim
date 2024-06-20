@@ -1,7 +1,6 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local base_config = require('user.base_config')
 local mason_path = base_config.mason_path
-local opts = { remap = false, silent = true }
 
 vim.g.OmniSharp_highlight_groups = {
   EnumMemberName = "@property",
@@ -43,8 +42,9 @@ require('lspconfig').omnisharp.setup({
   handlers = {
     ["textDocument/definition"] = require('omnisharp_extended').handler
   },
-  on_attach = function(_, _)
-    base_config.keymap()
+  on_attach = function(_, bufnr)
+    local opts = { remap = false, silent = true, buffer = bufnr }
+    base_config.keymap(bufnr)
     vim.keymap.set('n', '<C-f>', '<cmd>OmniSharpCodeFormat<CR>', opts)
     vim.keymap.set('n', '<leader>fm', '<cmd>OmniSharpCodeFormat<CR>', opts)
     vim.keymap.set('n', '<leader>sh', '<cmd>OmniSharpSignatureHelp<CR>', opts)

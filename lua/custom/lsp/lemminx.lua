@@ -14,7 +14,7 @@ end
 require('lspconfig').lemminx.setup({
   cmd = { lemminx_path },
   capabilities = capabilities,
-  on_attach = function(_, _)
-    base_config.keymap()
+  on_attach = function(_, bufnr)
+    base_config.keymap(bufnr)
   end
 })

@@ -1,7 +1,7 @@
 local M = {}
 
-local base_keymaps = function()
-  local opts = { remap = false }
+local base_keymaps = function(bufnr)
+  local opts = { remap = false, buffer = bufnr }
 
   vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set('n', '<F2>', function() vim.lsp.buf.rename() end, opts)
