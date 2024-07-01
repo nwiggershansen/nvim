@@ -18,6 +18,7 @@ return {
       require "custom.lsp.lemminx"
       require "custom.lsp.omnisharp"
       require "custom.lsp.tsserver"
+      require "custom.lsp.golang"
     end,
   },
 }
