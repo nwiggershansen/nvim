@@ -8,7 +8,7 @@ require("tokyonight").setup({
 vim.g.tokyonight_transparent_sidebar = true
 vim.g.tokyonight_transparent = true
 
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("tokyonight-storm")
 
 vim.cmd([[ highlight NvimTreeGitFileDirtyHL guifg=#E0AF68 ]])
 vim.cmd([[ highlight NvimTreeGitFileRenamedHL guifg=#E0AF68 ]])
