@@ -7,7 +7,10 @@ end
 local MAX_FILE_SIZE = 100 * 1024
 
 nvim_treesitter.setup {
-  ensure_installed = { 'javascript', 'typescript', 'tsx', 'bash', 'dockerfile', 'lua', 'bicep' },
+  ensure_installed = {
+    'bash', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'bicep',
+    'dockerfile', 'typescript', 'javascript', 'tsx', 'go', 'c_sharp', 'rust'
+  },
   highlight = {
     enable = true,
     disable = function(_, bufnr)
