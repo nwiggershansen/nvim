@@ -64,12 +64,6 @@ keymap.set('n', "<leader>tp", "<cmd>tabp<CR>")          -- Go to previous tab
 keymap.set('n', "<leader>e", "<cmd>NvimTreeToggle<CR>") -- Toggles file viewer
 keymap.set('n', "<leader>rs", "<cmd>LspRestart<CR>")    -- Restarts lsp
 
--- Resize buffer without having to do count
-keymap.set("n", "<C-w><", "<C-w>10<", opts)
-keymap.set("n", "<C-w>>", "<C-w>10>", opts)
-keymap.set("n", "<leader><", "<C-w>10<", opts)
-keymap.set("n", "<leader>>", "<C-w>10>", opts)
-
 -- Move visually selected easier
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
