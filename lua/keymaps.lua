@@ -120,11 +120,13 @@ keymap.set('n', '<leader>lg', '<cmd>LazyGit<CR>', { desc = "Open LazyGit" })
 
 keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
--- Show/hide inlay hints
-vim.keymap.set('n', '<leader>h', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end)
+vim.keymap.set('n', '<leader>h', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end,
+  { desc = "Show/hide inlay hints" })
 
 -- Resize window using <ctrl> arrow keys
 keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
 keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+
+keymap.set("n", "<C-k>", "<cmd>lua vim.diagnostic.open_float()<cr>", { desc = "Open floating window for diagnostics" })
