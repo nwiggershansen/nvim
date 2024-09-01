@@ -71,8 +71,6 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("n", "J", "mzJ`z")
 
 -- Keep search terms in center
-keymap.set("n", "n", "nzzzv")
-keymap.set("n", "N", "Nzzzv")
 keymap.set("n", "%", "%zz")
 
 keymap.set({ "n", "v" }, '<leader>d', '"_d')
@@ -104,10 +102,10 @@ keymap.set('n', 'Q', '@qj')
 keymap.set('x', 'Q', '<cmd>norm @q<CR>')
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-keymap.set("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
+keymap.set("n", "n", "'Nn'[v:searchforward].'zzzv'", { expr = true, desc = "Next Search Result" })
 keymap.set("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
 keymap.set("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
-keymap.set("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
+keymap.set("n", "N", "'nN'[v:searchforward].'zzzv'", { expr = true, desc = "Prev Search Result" })
 keymap.set("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
 keymap.set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
 
