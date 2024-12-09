@@ -72,7 +72,7 @@ else
 
   pickers = vim.tbl_deep_extend("force", pickers, {
     find_files = {
-      find_command = vim.list_extend({ "fd", "--type", "f", "--hidden", "--no-ignore" }, generate_ignore_args("fd")),
+      find_command = vim.list_extend({ "fd", "--type", "f", "--hidden", }, generate_ignore_args("fd")),
     },
   })
 end
