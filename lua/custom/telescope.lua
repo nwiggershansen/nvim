@@ -16,6 +16,7 @@ local ignore_patterns = {
   "*.lock",
   "bin",
   "obj",
+  "Builds"
 }
 
 local function generate_ignore_args(tool)
