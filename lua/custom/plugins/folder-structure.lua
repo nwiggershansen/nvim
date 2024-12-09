@@ -1,13 +1,13 @@
 return {
   {
-    'nvim-tree/nvim-tree.lua',
+    "nvim-tree/nvim-tree.lua",
     lazy = false,
     priority = 100,
     dependencies = {
-      'nvim-tree/nvim-web-devicons',
+      "nvim-tree/nvim-web-devicons",
     },
     config = function()
-      require "custom.nvim-tree"
+      require("custom.nvim-tree")
     end,
   },
 }

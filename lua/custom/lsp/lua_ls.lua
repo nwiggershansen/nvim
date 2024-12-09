@@ -22,7 +22,7 @@ require('lspconfig').lua_ls.setup({
       hint = { enable = true },
       diagnostics = {
         globals = { "vim" }
-      }
-    }
+      },
+         }
   }
 })

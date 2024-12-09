@@ -1,24 +1,24 @@
 return {
   {
-    'neovim/nvim-lspconfig',
+    "neovim/nvim-lspconfig",
     opts = {
-      inlay_hints = { enabled = true }
+      inlay_hints = { enabled = true },
     },
     dependencies = {
-      'b0o/schemastore.nvim',
+      "b0o/schemastore.nvim",
       -- C# specific
-      'OmniSharp/omnisharp-vim',
-      'Hoffs/omnisharp-extended-lsp.nvim',
-      'carlsmedstad/vim-bicep',
-      { "j-hui/fidget.nvim", opts = {} }
+      "OmniSharp/omnisharp-vim",
+      "Hoffs/omnisharp-extended-lsp.nvim",
+      "carlsmedstad/vim-bicep",
+      { "j-hui/fidget.nvim", opts = {} },
     },
     config = function()
-      require "custom.lsp"
-      require "custom.lsp.lua_ls"
-      require "custom.lsp.lemminx"
-      require "custom.lsp.omnisharp"
-      require "custom.lsp.tsserver"
-      require "custom.lsp.golang"
+      require("custom.lsp")
+      require("custom.lsp.lua_ls")
+      require("custom.lsp.lemminx")
+      require("custom.lsp.omnisharp")
+      require("custom.lsp.tsserver")
+      require("custom.lsp.golang")
     end,
   },
 }

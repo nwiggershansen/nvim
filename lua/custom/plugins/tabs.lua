@@ -1,10 +1,9 @@
 return {
   {
-    'romgrk/barbar.nvim',
-    dependencies = {
-    },
+    "romgrk/barbar.nvim",
+    dependencies = {},
     config = function()
-      require "custom.tabs"
+      require("custom.tabs")
     end,
   },
 }

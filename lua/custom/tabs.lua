@@ -11,25 +11,23 @@ if not bufferline_status then
 end
 
 local function get_tree_size()
-  return require'nvim-tree.view'.View.width
+  return require("nvim-tree.view").View.width
 end
 
-nvim_tree_events.subscribe('TreeOpen', function()
+nvim_tree_events.subscribe("TreeOpen", function()
   bufferline_api.set_offset(get_tree_size())
 end)
 
-nvim_tree_events.subscribe('Resize', function()
+nvim_tree_events.subscribe("Resize", function()
   bufferline_api.set_offset(get_tree_size())
 end)
 
-nvim_tree_events.subscribe('TreeClose', function()
+nvim_tree_events.subscribe("TreeClose", function()
   bufferline_api.set_offset(0)
 end)
 
-vim.keymap.set('n', "<A-,>", "<cmd>BufferPrevious<CR>")
-vim.keymap.set('n', "<A-.>", "<cmd>BufferNext<CR>")
-vim.keymap.set('n', "<A-<>", "<cmd>BufferMovePrevious<CR>")
-vim.keymap.set('n', "<A->>", "<cmd>BufferMoveNext<CR>")
-vim.keymap.set('n', "<A-w>", "<cmd>BufferClose<CR>")
-
-
+vim.keymap.set("n", "<A-,>", "<cmd>BufferPrevious<CR>")
+vim.keymap.set("n", "<A-.>", "<cmd>BufferNext<CR>")
+vim.keymap.set("n", "<A-<>", "<cmd>BufferMovePrevious<CR>")
+vim.keymap.set("n", "<A->>", "<cmd>BufferMoveNext<CR>")
+vim.keymap.set("n", "<A-w>", "<cmd>BufferClose<CR>")

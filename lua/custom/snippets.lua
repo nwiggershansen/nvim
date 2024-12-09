@@ -24,7 +24,6 @@ vim.keymap.set({ "i", "s" }, "<tab>", function()
   end
 end, { silent = true })
 
-
 vim.keymap.set({ "i", "s" }, "<C-j>", function()
   if ls.jumpable(-1) then
     ls.jump(-1)

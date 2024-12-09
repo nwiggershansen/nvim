@@ -1,32 +1,31 @@
-local utils = require('statusline.modules')
+local utils = require("statusline.modules")
 
 function Statusline()
-  local res = table.concat {
+  local res = table.concat({
     utils.Mode(),
     utils.Spacer(),
     utils.Git(),
     utils.Spacer(),
-    '%=',
+    "%=",
     utils.FileInfo(),
     utils.Spacer(),
-    '%=',
+    "%=",
     utils.LSP_Diagnostics(),
     utils.LSP_status(),
     utils.Spacer(),
     utils.cwd(),
+  })
 
-  }
-
-  if (utils.Treesitter() ~= '') then
-    res = table.concat {
+  if utils.Treesitter() ~= "" then
+    res = table.concat({
       res,
       utils.AltSpacer(),
       utils.Treesitter(),
-      utils.AltSpacer()
-    }
+      utils.AltSpacer(),
+    })
   end
 
-  return res;
+  return res
 end
 
-vim.o.statusline = '%!v:lua.Statusline()'
+vim.o.statusline = "%!v:lua.Statusline()"

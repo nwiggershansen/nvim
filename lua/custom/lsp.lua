@@ -1,6 +1,6 @@
-local base_config = require('user.base_config')
-local status, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
-local lspconfig = require('lspconfig')
+local base_config = require("user.base_config")
+local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+local lspconfig = require("lspconfig")
 
 if not status then
   return
@@ -15,10 +15,10 @@ local function config(_config, func)
   return vim.tbl_deep_extend("force", {
     on_attach = function(_, bufnr)
       base_config.keymap(bufnr)
-      if (type(func) == 'function') then
+      if type(func) == "function" then
         func()
       end
-    end
+    end,
   }, _config or {})
 end
 
@@ -30,10 +30,10 @@ lspconfig.jsonls.setup(config({
   capabilities = capabilities,
   settings = {
     json = {
-      schemas = require('schemastore').json.schemas(),
+      schemas = require("schemastore").json.schemas(),
       validate = { enable = true },
     },
-  }
+  },
 }, nil))
 
 lspconfig.yamlls.setup(config({
@@ -41,12 +41,11 @@ lspconfig.yamlls.setup(config({
   settings = {
     yaml = {
       schemas = {
-        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] =
-        "*azure-pipelines*.yml",
-        ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*"
-      }
-    }
-  }
+        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = "*azure-pipelines*.yml",
+        ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+      },
+    },
+  },
 }, nil))
 
 lspconfig.bicep.setup(config({ cmd = { bicep_command }, capabilities = capabilities }, nil))
@@ -54,10 +53,10 @@ lspconfig.bicep.setup(config({ cmd = { bicep_command }, capabilities = capabilit
 lspconfig.rust_analyzer.setup(config({
   capabilities = capabilities,
   settings = {
-    ['rust-analyzer'] = {
+    ["rust-analyzer"] = {
       cargo = {
-        allFeatures = true
-      }
-    }
-  }
+        allFeatures = true,
+      },
+    },
+  },
 }))

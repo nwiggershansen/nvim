@@ -6,7 +6,7 @@ return {
       "nvim-neotest/nvim-nio",
     },
     config = function()
-      require "custom.dap"
+      require("custom.dap")
     end,
-  }
+  },
 }

@@ -1,5 +1,5 @@
-local base_config = require('user.base_config')
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local base_config = require("user.base_config")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local inlay_hints = {
   inlayHints = {
@@ -12,14 +12,13 @@ local inlay_hints = {
     includeInlayVariableTypeHints = false,
   },
 }
-require('lspconfig').ts_ls.setup({
-  on_attach    = function(_, bufnr)
+require("lspconfig").ts_ls.setup({
+  on_attach = function(_, bufnr)
     base_config.keymap(bufnr)
   end,
   capabilities = capabilities,
   settings = {
     javascript = inlay_hints,
-    typescript = inlay_hints
-  }
+    typescript = inlay_hints,
+  },
 })
-

@@ -1,6 +1,6 @@
 vim.filetype.add({
   extension = {
-    uxml = 'xml',
-    uss = 'css'
-  }
+    uxml = "xml",
+    uss = "css",
+  },
 })
