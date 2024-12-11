@@ -4,8 +4,15 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
     config = function()
+      require("telescope").setup({
+        extensions = {
+          fzf = {},
+        },
+      })
+      require("telescope").load_extension("fzf")
       require("custom.telescope.base")
       require("custom.telescope.multigrep").setup()
     end,
