@@ -1,5 +1,6 @@
 local status, telescope = pcall(require, "telescope")
 local builtin_status, builtin = pcall(require, "telescope.builtin")
+
 local opts = { remap = false }
 if not status or not builtin_status then
   return
@@ -16,7 +17,7 @@ local ignore_patterns = {
   "*.lock",
   "bin",
   "obj",
-  "Builds"
+  "Builds",
 }
 
 local function generate_ignore_args(tool)
@@ -33,49 +34,26 @@ local function generate_ignore_args(tool)
   return args
 end
 
-if vim.fn.has("unix") == 1 then
-  local grep_args = vim.list_extend({ "--no-ignore", "--hidden" }, generate_ignore_args("rg"))
+local grep_args = vim.list_extend({ "--no-ignore", "--hidden" }, generate_ignore_args("rg"))
 
-  pickers = {
-    live_grep = {
-      additional_args = function(_)
-        return grep_args
-      end,
-    },
-    grep_string = {
-      additional_args = function(_)
-        return grep_args
-      end,
-    },
-  }
+pickers = {
+  live_grep = {
+    additional_args = function(_)
+      return grep_args
+    end,
+  },
+  grep_string = {
+    additional_args = function(_)
+      return grep_args
+    end,
+  },
+}
 
-  pickers = vim.tbl_deep_extend("force", pickers, {
-    find_files = {
-      find_command = vim.list_extend({ "rg", "--files", "--no-ignore", "--hidden" }, generate_ignore_args("rg")),
-    },
-  })
-else
-  local grep_args = {}
-
-  pickers = {
-    live_grep = {
-      additional_args = function(_)
-        return grep_args
-      end,
-    },
-    grep_string = {
-      additional_args = function(_)
-        return grep_args
-      end,
-    },
-  }
-
-  pickers = vim.tbl_deep_extend("force", pickers, {
-    find_files = {
-      find_command = vim.list_extend({ "fd", "--type", "f", "--hidden", }, generate_ignore_args("fd")),
-    },
-  })
-end
+pickers = vim.tbl_deep_extend("force", pickers, {
+  find_files = {
+    find_command = vim.list_extend({ "rg", "--files", "--no-ignore", "--hidden" }, generate_ignore_args("rg")),
+  },
+})
 
 telescope.setup({
   defaults = {
@@ -99,8 +77,10 @@ telescope.setup({
 
 vim.keymap.set("n", "<C-p>", builtin.find_files, opts)
 vim.keymap.set("n", "<leader>ff", builtin.find_files, opts)
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, opts)
 vim.keymap.set("n", "<leader>fb", builtin.buffers, opts)
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, opts)
+vim.keymap.set("n", "<leader>en", function()
+  builtin.find_files({ cwd = vim.fn.stdpath("config") })
+end)
 
 require("telescope").load_extension("ui-select")

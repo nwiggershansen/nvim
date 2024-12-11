@@ -6,7 +6,8 @@ return {
       "nvim-telescope/telescope-ui-select.nvim",
     },
     config = function()
-      require("custom.telescope")
+      require("custom.telescope.base")
+      require("custom.telescope.multigrep").setup()
     end,
   },
 }
