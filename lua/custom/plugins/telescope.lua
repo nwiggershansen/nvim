@@ -13,8 +13,7 @@ return {
         },
       })
       require("telescope").load_extension("fzf")
-      require("custom.telescope.base")
-      require("custom.telescope.multigrep").setup()
+      require("custom.telescope")
     end,
   },
 }

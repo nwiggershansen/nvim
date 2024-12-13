@@ -77,6 +77,7 @@ telescope.setup({
 
 vim.keymap.set("n", "<C-p>", builtin.find_files, opts)
 vim.keymap.set("n", "<leader>ff", builtin.find_files, opts)
+vim.keymap.set("n", "<leader>fg", require("custom.telescope.multigrep").live_multigrep)
 vim.keymap.set("n", "<leader>fb", builtin.buffers, opts)
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, opts)
 vim.keymap.set("n", "<leader>en", function()
