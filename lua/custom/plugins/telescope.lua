@@ -13,7 +13,8 @@ return {
         },
       })
       require("telescope").load_extension("fzf")
-      require("custom.telescope")
+      require("telescope").load_extension("ui-select")
+      require("custom.telescope.core")
     end,
   },
 }

@@ -83,5 +83,3 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, opts)
 vim.keymap.set("n", "<leader>en", function()
   builtin.find_files({ cwd = vim.fn.stdpath("config") })
 end)
-
-require("telescope").load_extension("ui-select")
