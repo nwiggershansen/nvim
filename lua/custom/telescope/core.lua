@@ -34,7 +34,7 @@ local function generate_ignore_args(tool)
   return args
 end
 
-local grep_args = vim.list_extend({ "--hidden" }, generate_ignore_args("rg"))
+local grep_args = vim.list_extend({ "--hidden", "--smart-case" }, generate_ignore_args("rg"))
 
 pickers = {
   live_grep = {
@@ -51,7 +51,7 @@ pickers = {
 
 pickers = vim.tbl_deep_extend("force", pickers, {
   find_files = {
-    find_command = vim.list_extend({ "rg", "--files", "--hidden" }, generate_ignore_args("rg")),
+    find_command = vim.list_extend({ "rg", "--files", "--hidden", "--smart-case" }, generate_ignore_args("rg")),
   },
 })
 
