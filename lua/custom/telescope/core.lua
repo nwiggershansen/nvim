@@ -75,6 +75,9 @@ telescope.setup({
   },
 })
 
+-- Has to after setup, otherwise it doesn't have correct extensions setup
+require("telescope").load_extension("ui-select")
+
 vim.keymap.set("n", "<C-p>", builtin.find_files, opts)
 vim.keymap.set("n", "<leader>ff", builtin.find_files, opts)
 vim.keymap.set("n", "<leader>fg", require("custom.telescope.multigrep").live_multigrep)
