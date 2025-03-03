@@ -6,7 +6,7 @@ local netcoredbg = ""
 
 if vim.fn.has("mac") == 1 then
 elseif vim.fn.has("unix") == 1 then
-  netcoredbg = base_path .. "/netcoredbg/netcoredbg"
+  netcoredbg = base_path .. "netcoredbg/netcoredbg"
 elseif vim.fn.has("win32") == 1 then
   if home ~= nil then
     netcoredbg = home:gsub("\\", "/") .. "/AppData/Local/nvim-data/third-party/netcoredbg/netcoredbg.exe"
