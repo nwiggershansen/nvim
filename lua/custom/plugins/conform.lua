@@ -8,6 +8,7 @@ return {
           javascript = { { "prettierd", "prettier" } },
           typescript = { { "prettierd", "prettier" } },
           go = { "gofmt" },
+          py = { "ruff" },
         },
         format_on_save = {
           lsp_fallback = true, -- Enables fallback to `vim.lsp.buf.format` if no formatter is available

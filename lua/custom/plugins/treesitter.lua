@@ -24,6 +24,7 @@ return {
         "go",
         "c_sharp",
         "rust",
+        "python",
       },
       highlight = {
         enable = true,
