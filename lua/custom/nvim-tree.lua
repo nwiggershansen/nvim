@@ -51,7 +51,7 @@ nvimtree.setup({
     },
   },
   filters = {
-    custom = { ".meta$", ".unity$", ".git/*" },
+    custom = { ".meta$", ".unity$", "^\\.git/*" },
   },
   on_attach = function(bufnr)
     nvimtreeapi.config.mappings.default_on_attach(bufnr)
