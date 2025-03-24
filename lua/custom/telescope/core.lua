@@ -51,7 +51,7 @@ pickers = {
 
 pickers = vim.tbl_deep_extend("force", pickers, {
   find_files = {
-    find_command = vim.list_extend({ "rg", "--files", "--hidden", "--smart-case" }, generate_ignore_args("rg")),
+    find_command = vim.list_extend({ "rg", "--files", "--hidden", "--smart-case", "--no-ignore" }, generate_ignore_args("rg")),
   },
 })
 

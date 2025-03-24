@@ -50,6 +50,11 @@ nvimtree.setup({
       },
     },
   },
+  git = {
+    enable = true,
+    ignore = false,
+    timeout = 500,
+  },
   filters = {
     custom = { ".meta$", ".unity$", "^\\.git/*", ".anim$", ".prefab$" },
   },
