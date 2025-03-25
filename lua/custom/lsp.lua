@@ -1,12 +1,7 @@
 local base_config = require("user.base_config")
-local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 local lspconfig = require("lspconfig")
 
-if not status then
-  return
-end
-
-local capabilities = cmp_nvim_lsp.default_capabilities()
 local bicep_command = base_config.mason_path .. "bin/bicep-lsp"
 
 local servers = { "tailwindcss", "cssls", "html", "bashls", "dockerls" }
