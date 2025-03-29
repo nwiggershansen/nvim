@@ -19,6 +19,7 @@ local ignore_patterns = {
   "obj",
   "Builds",
   "lib/python*",
+  "Library/*",
 }
 
 local function generate_ignore_args(tool)
