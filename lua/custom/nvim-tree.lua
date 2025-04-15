@@ -56,7 +56,7 @@ nvimtree.setup({
     timeout = 500,
   },
   filters = {
-    custom = { ".meta$", ".unity$", "^\\.git/*", ".anim$", ".prefab$" },
+    custom = { "\\.meta$", "\\.unity$", "^\\.git/*", "\\.anim$", "\\.prefab$" },
   },
   on_attach = function(bufnr)
     nvimtreeapi.config.mappings.default_on_attach(bufnr)
