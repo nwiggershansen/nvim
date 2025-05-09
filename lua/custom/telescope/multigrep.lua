@@ -8,6 +8,7 @@ local M = {}
 M.live_multigrep = function(opts)
   opts = opts or {}
   opts.cwd = opts.cwd or vim.uv.cwd()
+  opts.ignore_patterns = opts.ignore_patterns or {}
 
   local finder = finders.new_async_job({
     command_generator = function(prompt)
@@ -26,6 +27,11 @@ M.live_multigrep = function(opts)
       if pieces[2] then
         table.insert(args, "-g")
         table.insert(args, pieces[2])
+      end
+
+      for _, pattern in ipairs(opts.ignore_patterns) do
+        table.insert(args, "-g")
+        table.insert(args, "!" .. "**/" .. pattern)
       end
 
       return vim.tbl_flatten({

@@ -20,6 +20,7 @@ local ignore_patterns = {
   "Builds",
   "lib/python*",
   "Library/*",
+  "package-lock.json",
 }
 
 local function generate_ignore_args(tool)
@@ -82,7 +83,9 @@ require("telescope").load_extension("ui-select")
 
 vim.keymap.set("n", "<C-p>", builtin.find_files, opts)
 vim.keymap.set("n", "<leader>ff", builtin.find_files, opts)
-vim.keymap.set("n", "<leader>fg", require("custom.telescope.multigrep").live_multigrep)
+vim.keymap.set("n", "<leader>fg", function()
+  require("custom.telescope.multigrep").live_multigrep({ ignore_patterns = ignore_patterns })
+end)
 vim.keymap.set("n", "<leader>fb", builtin.buffers, opts)
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, opts)
 vim.keymap.set("n", "<leader>en", function()
