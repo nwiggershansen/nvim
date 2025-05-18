@@ -1,16 +1,37 @@
 return {
   {
     "Saghen/blink.cmp",
-    lazy = false,
-    priority = 100,
     dependencies = {
-      "onsails/lspkind.nvim",
-      { "L3MON4D3/LuaSnip", dependencies = { "rafamadriz/friendly-snippets" } },
+      "rafamadriz/friendly-snippets",
     },
-    config = function()
-      require("custom.completion")
-      require("custom.snippets")
-      require("custom.snippets.unity")
-    end,
+    opts = {
+      keymap = {
+        preset = "enter",
+        ["<C-y>"] = { "select_and_accept" },
+      },
+      sources = {
+        providers = {
+          lsp = {
+            name = "lsp",
+            enabled = true,
+            module = "blink.cmp.sources.lsp",
+            kind = "LSP",
+            score_offset = 90,
+          },
+          snippets = {
+            name = "snippets",
+            enabled = true,
+            module = "blink.cmp.sources.snippets",
+            score_offset = 85,
+          },
+        },
+        default = { "lsp", "path", "snippets", "buffer" },
+      },
+      cmdline = {
+        enabled = false,
+      },
+      fuzzy = { implementation = "lua" },
+    },
+    opts_extended = { "sources.default" },
   },
 }

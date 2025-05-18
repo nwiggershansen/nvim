@@ -1,4 +1,4 @@
-local capabilities = require("blink.cmp").get_lsp_capabilities()
+local capabilities = require("blink.cmp").get_lsp_capabilities({}, false)
 local base_config = require("user.base_config")
 local mason_path = base_config.mason_path
 
