@@ -21,6 +21,7 @@ local ignore_patterns = {
   "lib/python*",
   "Library/*",
   "package-lock.json",
+  "target",
 }
 
 local function generate_ignore_args(tool)
