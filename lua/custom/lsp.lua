@@ -9,7 +9,7 @@ end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 local bicep_command = base_config.mason_path .. "bin/bicep-lsp"
 
-local servers = { "tailwindcss", "cssls", "html", "bashls", "dockerls", "pyright" }
+local servers = { "tailwindcss", "cssls", "html", "bashls", "dockerls" }
 
 local function config(_config, func)
   return vim.tbl_deep_extend("force", {

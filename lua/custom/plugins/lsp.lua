@@ -19,6 +19,7 @@ return {
       require("custom.lsp.omnisharp")
       require("custom.lsp.tsserver")
       require("custom.lsp.golang")
+      require("custom.lsp.python")
     end,
   },
 }
