@@ -40,10 +40,18 @@ lspconfig.yamlls.setup(config({
   capabilities = capabilities,
   settings = {
     yaml = {
-      schemas = {
-        ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = "*azure-pipelines*.yml",
-        ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+      schemaStore = {
+        -- You must disable built-in schemaStore support if you want to use
+        -- this plugin and its advanced options like `ignore`.
+        enable = false,
+        -- Avoid TypeError: Cannot read properties of undefined (reading 'length')
+        url = "",
       },
+      schemas = require("schemastore").yaml.schemas(),
+      -- schemas = {
+      --   ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = "*azure-pipelines*.yml",
+      --   ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+      -- },
     },
   },
 }, nil))
