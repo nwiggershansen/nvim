@@ -55,6 +55,7 @@ return {
           selection = { preselect = true, auto_insert = true },
         },
         menu = {
+          border = "single",
           draw = {
             components = {
               kind_icon = {
