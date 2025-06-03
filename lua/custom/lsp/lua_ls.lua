@@ -1,5 +1,5 @@
 local base_config = require("user.base_config")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 local lua_bin_path = base_config.mason_path
 if vim.fn.has("mac") == 1 then

@@ -5,6 +5,7 @@ return {
       inlay_hints = { enabled = true },
     },
     dependencies = {
+      "Saghen/blink.cmp",
       "b0o/schemastore.nvim",
       -- C# specific
       "OmniSharp/omnisharp-vim",
