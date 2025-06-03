@@ -4,6 +4,15 @@ return {
     dependencies = {
       "rafamadriz/friendly-snippets",
       "onsails/lspkind.nvim",
+      {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        config = function()
+          -- Your existing snippet files will be loaded here
+          require("custom.snippets")
+          require("custom.snippets.unity")
+        end,
+      },
     },
     version = "1.*",
     lazy = false,
@@ -67,7 +76,6 @@ return {
           },
         },
       },
-
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },
         providers = {
@@ -98,6 +106,9 @@ return {
         },
       },
       signature = { enabled = true },
+      snippets = {
+        preset = "luasnip",
+      },
     },
   },
 }
