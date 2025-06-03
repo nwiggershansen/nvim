@@ -16,7 +16,6 @@
   "neovim": { "branch": "main", "commit": "96ff3993a67356ee85d1cdab9be652cdc1c5d1ac" },
   "nvim": { "branch": "main", "commit": "5b5e3aef9ad7af84f463d17b5479f06b87d5c429" },
   "nvim-autopairs": { "branch": "master", "commit": "4d74e75913832866aa7de35e4202463ddf6efd1b" },
-  "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },
   "nvim-dap": { "branch": "master", "commit": "7aade9e99bef5f0735cf966e715b3ce45515d786" },
   "nvim-dap-ui": { "branch": "master", "commit": "bc81f8d3440aede116f821114547a476b082b319" },
   "nvim-jdtls": { "branch": "master", "commit": "c23f200fee469a415c77265ca55b496feb646992" },
