@@ -16,6 +16,27 @@ return {
         ["<C-e>"] = { "hide", "fallback" },
         ["<C-n>"] = { "select_next", "fallback" },
         ["<C-p>"] = { "select_prev", "fallback" },
+        ["<Tab>"] = {
+          function(cmp)
+            if cmp.snippet_active() then
+              return cmp.snippet_forward()
+            end
+            -- Return false to continue to next command/fallback
+            return false
+          end,
+          "fallback",
+        },
+
+        ["<S-Tab>"] = {
+          function(cmp)
+            if cmp.snippet_active() then
+              return cmp.snippet_backward()
+            end
+            -- Return false to continue to next command/fallback
+            return false
+          end,
+          "fallback",
+        },
       },
       completion = {
         accept = {
