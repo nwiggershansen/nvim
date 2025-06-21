@@ -13,5 +13,6 @@
 ![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?logo=javascript&logoColor=white) 
 ![Typescript](https://img.shields.io/badge/Typescript-3178C6?logo=typescript&logoColor=white)
 ![Go](https://img.shields.io/badge/Golang-00ADD8?logo=go&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)
 
 </div>
