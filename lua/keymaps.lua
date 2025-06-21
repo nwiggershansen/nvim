@@ -72,8 +72,6 @@ keymap.set("n", "J", "mzJ`z")
 -- Keep search terms in center
 keymap.set("n", "%", "%zz")
 
-keymap.set({ "n", "v" }, "<leader>d", "\"_d")
-
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
@@ -127,4 +125,4 @@ keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Heig
 keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
-keymap.set("n", "<C-k>", "<cmd>lua vim.diagnostic.open_float()<cr>", { desc = "Open floating window for diagnostics" })
+keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<cr>", { desc = "Open floating window for diagnostics" })
