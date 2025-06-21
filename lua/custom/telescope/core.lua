@@ -18,6 +18,7 @@ local ignore_patterns = {
   "bin",
   "obj",
   "Builds",
+  "Build",
   "lib/python*",
   "Library/*",
   "package-lock.json",
