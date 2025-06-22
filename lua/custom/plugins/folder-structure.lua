@@ -4,7 +4,7 @@ return {
     lazy = false,
     priority = 100,
     dependencies = {
-      "nvim-tree/nvim-web-devicons",
+      "echasnovski/mini.icons",
     },
     config = function()
       require("custom.nvim-tree")
