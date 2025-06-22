@@ -1,8 +1,8 @@
 return {
   {
-    "windwp/nvim-autopairs",
+    "echasnovski/mini.pairs",
     config = function()
-      require("nvim-autopairs").setup({})
+      require("mini.pairs").setup()
     end,
   },
 }
