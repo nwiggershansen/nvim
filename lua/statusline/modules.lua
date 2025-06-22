@@ -13,7 +13,7 @@ local sep_l = separators["left"]
 
 local modes = require("statusline.colors").modes
 local icon = "  "
-local devicons_present, devicons = pcall(require, "nvim-web-devicons")
+local devicons_present, devicons = pcall(require, "mini.icons")
 
 M.Mode = function()
   local m = vim.api.nvim_get_mode().mode
@@ -43,7 +43,7 @@ M.FileInfo = function()
 end
 
 M.GetFileIcon = function(filename)
-  local ft_icon = devicons.get_icon(filename)
+  local ft_icon = devicons.get("file", filename)
 
   return (ft_icon ~= nil and " " .. ft_icon) or ""
 end
