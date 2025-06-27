@@ -18,7 +18,6 @@ keymap.set("v", "<S-Tab>", "<gv")
 
 -- This interferes with the jump list of Ctrl + i
 -- keymap.set('n', '<Tab>', '>>')
-keymap.set("i", "<Tab>", "<Esc>>>hi")
 keymap.set("v", "<Tab>", ">gv")
 
 -- Move Lines
