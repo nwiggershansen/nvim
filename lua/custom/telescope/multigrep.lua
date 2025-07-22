@@ -26,7 +26,7 @@ M.live_multigrep = function(opts)
 
       if pieces[2] then
         table.insert(args, "-g")
-        table.insert(args, pieces[2])
+        table.insert(args, pieces[2]:match("^%*") and pieces[2] or "*" .. pieces[2])
       end
 
       for _, pattern in ipairs(opts.ignore_patterns) do
@@ -48,7 +48,7 @@ M.live_multigrep = function(opts)
       debounce = 100,
       prompt_title = "Multi Grep",
       finder = finder,
-      previwer = conf.grep_previewer(opts),
+      previewer = conf.grep_previewer(opts),
       sorter = require("telescope.sorters").empty(),
     })
     :find()
