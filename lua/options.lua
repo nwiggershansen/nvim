@@ -20,7 +20,7 @@ vim.opt.wrap = true
 --
 vim.g.mapleader = " "
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 100
 vim.opt.termguicolors = true
 
 -- Sets a screen-wide statusline, instead of per buffer
@@ -30,9 +30,9 @@ vim.opt.laststatus = 3
 -- vim.diagnostic.config({ virtual_text = false, signs = true, float = { border = "single" }, })
 
 -- Yank copies it to clipboard
-vim.opt.clipboard:append('unnamedplus')
+vim.opt.clipboard:append("unnamedplus")
 
-vim.cmd [[set mouse=a]]
+vim.cmd([[set mouse=a]])
 
 -- c       Auto-wrap comments using textwidth, inserting the current comment
 --         leader automatically.
@@ -43,7 +43,9 @@ vim.cmd [[set mouse=a]]
 
 -- Have to use auto-command as it gets overwritten for every buffer if not
 vim.api.nvim_create_autocmd("FileType", {
-  callback = function() vim.opt_local.formatoptions:remove({ "o", "r", "c" }) end,
+  callback = function()
+    vim.opt_local.formatoptions:remove({ "o", "r", "c" })
+  end,
 })
 
 vim.diagnostic.config({
