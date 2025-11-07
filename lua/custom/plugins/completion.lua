@@ -102,7 +102,7 @@ return {
           buffer = {
             name = "buf",
             module = "blink.cmp.sources.buffer",
-            min_keyword_length = 5,
+            min_keyword_length = 3,
           },
         },
       },
