@@ -90,3 +90,7 @@ vim.keymap.set("n", "<leader>fg", function()
 end)
 vim.keymap.set("n", "<leader>fb", builtin.buffers, opts)
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, opts)
+
+vim.keymap.set("n", "<leader>fs", builtin.lsp_workspace_symbols, opts)
+vim.keymap.set("n", "<leader>fS", builtin.lsp_dynamic_workspace_symbols, opts)
+vim.keymap.set("n", "<leader>fd", builtin.lsp_document_symbols, opts)
