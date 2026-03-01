@@ -16,7 +16,6 @@ return {
       require("custom.lsp")
       require("custom.lsp.lua_ls")
       require("custom.lsp.lemminx")
-      require("custom.lsp.omnisharp")
       require("custom.lsp.tsserver")
       require("custom.lsp.golang")
       require("custom.lsp.python")
