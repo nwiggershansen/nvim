@@ -7,8 +7,6 @@ return {
     dependencies = {
       "Saghen/blink.cmp",
       "b0o/schemastore.nvim",
-      -- C# specific
-      "Hoffs/omnisharp-extended-lsp.nvim",
       "carlsmedstad/vim-bicep",
       { "j-hui/fidget.nvim", opts = {} },
     },

@@ -30,8 +30,6 @@
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "nvim-treesitter-context": { "branch": "master", "commit": "464a443b5a6657f39772b20baa95d02ffe97b268" },
   "nvim-ts-autotag": { "branch": "main", "commit": "a1d526af391f6aebb25a8795cbc05351ed3620b5" },
-  "omnisharp-extended-lsp.nvim": { "branch": "main", "commit": "ec1a2431f8872f650a85ed71c24f0715df2e49c2" },
-  "omnisharp-vim": { "branch": "master", "commit": "cdbf65bc4385d7026428d2f392b40a317725cc9c" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "roslyn-filewatch.nvim": { "branch": "main", "commit": "ad2d15fddf1fc07287e80fac9470a194e4a61a7f" },
   "roslyn.nvim": { "branch": "main", "commit": "7deb9bb5b6afcb3c03c70741c6d364ffd8b59bda" },
