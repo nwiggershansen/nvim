@@ -8,7 +8,6 @@ return {
       "Saghen/blink.cmp",
       "b0o/schemastore.nvim",
       -- C# specific
-      "OmniSharp/omnisharp-vim",
       "Hoffs/omnisharp-extended-lsp.nvim",
       "carlsmedstad/vim-bicep",
       { "j-hui/fidget.nvim", opts = {} },

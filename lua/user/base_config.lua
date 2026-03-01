@@ -40,6 +40,7 @@ M.keymap = base_keymaps
 local home = os.getenv("HOME")
 
 if vim.fn.has("mac") == 1 then
+  M.mason_path = home .. "/.local/share/nvim/mason/"
 elseif vim.fn.has("unix") == 1 then
   M.mason_path = home .. "/.local/share/nvim/mason/"
 elseif vim.fn.has("win32") == 1 then
