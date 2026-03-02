@@ -6,7 +6,7 @@ local inlay_hints = {
     includeInlayEnumMemberValueHints = true,
     includeInlayFunctionLikeReturnTypeHints = true,
     includeInlayFunctionParameterTypeHints = true,
-    includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+    includeInlayParameterNameHints = "all",
     includeInlayParameterNameHintsWhenArgumentMatchesName = true,
     includeInlayPropertyDeclarationTypeHints = true,
     includeInlayVariableTypeHints = false,
@@ -16,11 +16,11 @@ local inlay_hints = {
 local vue_typescript_server_path = vim.fn.stdpath("data")
   .. "/mason/packages/vue-language-server/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin"
 
-require("lspconfig").ts_ls.setup({
+vim.lsp.config("ts_ls", {
+  capabilities = capabilities,
   on_attach = function(_, bufnr)
     base_config.keymap(bufnr)
   end,
-  capabilities = capabilities,
   init_options = {
     plugins = {
       {
@@ -36,5 +36,7 @@ require("lspconfig").ts_ls.setup({
     typescript = inlay_hints,
   },
 })
+vim.lsp.enable("ts_ls")
 
-require("lspconfig").volar.setup({})
+vim.lsp.config("volar", {})
+vim.lsp.enable("volar")

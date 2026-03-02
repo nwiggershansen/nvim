@@ -1,20 +1,18 @@
 local base_config = require("user.base_config")
 local capabilities = require("blink.cmp").get_lsp_capabilities()
-local lemminx_path = base_config.mason_path
 
-if vim.fn.has("mac") == 1 then
-elseif vim.fn.has("unix") == 1 then
-  lemminx_path = lemminx_path .. "bin/lemminx"
-elseif vim.fn.has("win32") == 1 then
-  lemminx_path = lemminx_path .. "lemminx/lemminx-win32.exe"
+local cmd
+if vim.fn.has("win32") == 1 then
+  cmd = base_config.mason_path .. "lemminx/lemminx-win32.exe"
 else
-  lemminx_path = "lemminx/lemminx"
+  cmd = base_config.mason_path .. "bin/lemminx"
 end
 
-require("lspconfig").lemminx.setup({
-  cmd = { lemminx_path },
+vim.lsp.config("lemminx", {
+  cmd = { cmd },
   capabilities = capabilities,
   on_attach = function(_, bufnr)
     base_config.keymap(bufnr)
   end,
 })
+vim.lsp.enable("lemminx")

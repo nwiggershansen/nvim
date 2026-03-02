@@ -1,28 +1,26 @@
 local base_config = require("user.base_config")
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-local lua_bin_path = base_config.mason_path
-if vim.fn.has("mac") == 1 then
-elseif vim.fn.has("unix") == 1 then
-  lua_bin_path = lua_bin_path .. "bin/lua-language-server"
-elseif vim.fn.has("win32") == 1 then
-  lua_bin_path = lua_bin_path .. "lua-language-server/bin/lua-language-server.exe"
+local cmd
+if vim.fn.has("win32") == 1 then
+  cmd = base_config.mason_path .. "lua-language-server/bin/lua-language-server.exe"
+elseif vim.fn.has("unix") == 1 or vim.fn.has("mac") == 1 then
+  cmd = base_config.mason_path .. "bin/lua-language-server"
 else
   return
 end
 
-require("lspconfig").lua_ls.setup({
+vim.lsp.config("lua_ls", {
+  cmd = { cmd },
+  capabilities = capabilities,
   on_attach = function(_, bufnr)
     base_config.keymap(bufnr)
   end,
-  cmd = { lua_bin_path },
-  capabilities = capabilities,
   settings = {
     Lua = {
       hint = { enable = true },
-      diagnostics = {
-        globals = { "vim" },
-      },
+      diagnostics = { globals = { "vim" } },
     },
   },
 })
+vim.lsp.enable("lua_ls")
