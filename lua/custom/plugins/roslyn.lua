@@ -5,21 +5,28 @@ return {
   {
     "seblyng/roslyn.nvim",
     ft = "cs",
-    opts = {
-      filewatching = "roslyn",
-      capabilities = capabilities,
-      config = {
-        ["csharp|background_analysis"] = {
-          dotnet_analyzer_diagnostics_scope = "openFiles",
-          dotnet_compiler_diagnostics_scope = "openFiles",
-        },
-      },
-      on_attach = function(_, bufnr)
-        base_config.keymap(bufnr)
-      end,
-    },
-  },
+    config = function()
+      vim.api.nvim_create_autocmd("LspAttach", {
+        callback = function(args)
+          local client = vim.lsp.get_client_by_id(args.data.client_id)
+          if client and client.name == "roslyn" then
+            base_config.keymap(args.buf)
+          end
+        end,
+      })
 
+      require("roslyn").setup({
+        filewatching = "roslyn",
+        capabilities = capabilities,
+        config = {
+          ["csharp|background_analysis"] = {
+            dotnet_analyzer_diagnostics_scope = "openFiles",
+            dotnet_compiler_diagnostics_scope = "openFiles",
+          },
+        },
+      })
+    end,
+  },
   {
     "khoido2003/roslyn-filewatch.nvim",
     dependencies = { "seblyng/roslyn.nvim" },
