@@ -38,5 +38,5 @@ vim.lsp.config("ts_ls", {
 })
 vim.lsp.enable("ts_ls")
 
-vim.lsp.config("volar", {})
-vim.lsp.enable("volar")
+vim.lsp.config("vue_ls", {})
+vim.lsp.enable("vue_ls")
