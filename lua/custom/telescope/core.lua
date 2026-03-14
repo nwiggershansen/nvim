@@ -23,6 +23,8 @@ local ignore_patterns = {
   "Library/*",
   "package-lock.json",
   "target",
+  "*.cs.uid",
+  ".godot/",
 }
 
 local function generate_ignore_args(tool)
