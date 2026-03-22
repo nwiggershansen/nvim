@@ -1,13 +1,13 @@
 return {
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     event = "VeryLazy",
     config = function()
       require("mini.surround").setup()
     end,
   },
   {
-    "echasnovski/mini.ai",
+    "nvim-mini/mini.ai",
     event = "VeryLazy",
     config = function()
       require("mini.ai").setup()

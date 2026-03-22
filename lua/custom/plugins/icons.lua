@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.icons",
+  "nvim-mini/mini.icons",
   opts = {
     extension = {
       csproj = { glyph = "󰪮", hl = "MiniIconsPurple" },

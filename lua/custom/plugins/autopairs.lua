@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.pairs",
+    "nvim-mini/mini.pairs",
     config = function()
       require("mini.pairs").setup()
     end,
