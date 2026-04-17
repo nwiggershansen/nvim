@@ -11,6 +11,7 @@ return {
           -- Your existing snippet files will be loaded here
           require("custom.snippets")
           require("custom.snippets.unity")
+          require("custom.snippets.godot")
         end,
       },
     },
