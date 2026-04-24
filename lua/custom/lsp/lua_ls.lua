@@ -5,7 +5,7 @@ local cmd
 if vim.fn.has("win32") == 1 then
   cmd = vim.fs.joinpath(base_config.mason_packages, "lua-language-server/bin/lua-language-server.exe")
 elseif vim.fn.has("unix") == 1 or vim.fn.has("mac") == 1 then
-  cmd = vim.fs.joinpath(base_config.mason_packages, "bin/lua-language-server")
+  cmd = vim.fs.joinpath(base_config.mason_packages, "lua-language-server/lua-language-server")
 else
   return
 end
