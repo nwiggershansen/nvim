@@ -3,9 +3,9 @@ local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 local cmd
 if vim.fn.has("win32") == 1 then
-  cmd = base_config.mason_path .. "lua-language-server/bin/lua-language-server.exe"
+  cmd = vim.fs.joinpath(base_config.mason_packages, "lua-language-server/bin/lua-language-server.exe")
 elseif vim.fn.has("unix") == 1 or vim.fn.has("mac") == 1 then
-  cmd = base_config.mason_path .. "bin/lua-language-server"
+  cmd = vim.fs.joinpath(base_config.mason_packages, "bin/lua-language-server")
 else
   return
 end

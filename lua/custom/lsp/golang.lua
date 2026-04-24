@@ -3,7 +3,7 @@ local base_config = require("user.base_config")
 
 local cmd
 if vim.fn.has("win32") == 1 then
-  cmd = base_config.mason_path .. "gopls/gopls.exe"
+  cmd = vim.fs.joinpath(base_config.mason_packages, "gopls/gopls.exe")
 else
   cmd = "gopls"
 end

@@ -1,6 +1,6 @@
 local base_config = require("user.base_config")
 local capabilities = require("blink.cmp").get_lsp_capabilities()
-local bicep_command = base_config.mason_path .. "bin/bicep-lsp"
+local bicep_command = vim.fs.joinpath(base_config.mason_packages, "bin/bicep-lsp")
 
 local function make_config(cfg)
   return vim.tbl_deep_extend("force", {

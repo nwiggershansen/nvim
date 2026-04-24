@@ -37,5 +37,6 @@ end
 
 M.keymap = base_keymaps
 M.mason_path = vim.fs.joinpath(vim.fn.stdpath("data"), "mason")
+M.mason_packages = vim.fs.joinpath(M.mason_path, "packages")
 
 return M

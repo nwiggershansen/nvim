@@ -3,9 +3,9 @@ local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 local cmd
 if vim.fn.has("win32") == 1 then
-  cmd = base_config.mason_path .. "lemminx/lemminx-win32.exe"
+  cmd = vim.fs.joinpath(base_config.mason_packages, "lemminx/lemminx-win32.exe")
 else
-  cmd = base_config.mason_path .. "bin/lemminx"
+  cmd = vim.fs.joinpath(base_config.mason_packages, "bin/lemminx")
 end
 
 vim.lsp.config("lemminx", {
