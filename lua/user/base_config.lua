@@ -36,21 +36,6 @@ local base_keymaps = function(bufnr)
 end
 
 M.keymap = base_keymaps
-
-local home = os.getenv("HOME")
-
-if vim.fn.has("mac") == 1 then
-  M.mason_path = home .. "/.local/share/nvim/mason/"
-elseif vim.fn.has("unix") == 1 then
-  M.mason_path = home .. "/.local/share/nvim/mason/"
-elseif vim.fn.has("win32") == 1 then
-  if home ~= nil then
-    M.mason_path = home:gsub("\\", "/") .. "/AppData/Local/nvim-data/mason/packages/"
-  else
-    M.mason_path = vim.fn.stdpath("data") .. "/mason/packages/"
-  end
-else
-  M.mason_path = vim.fn.stdpath("data") .. "/mason/packages/"
-end
+M.mason_path = vim.fs.joinpath(vim.fn.stdpath("data"), "mason")
 
 return M
