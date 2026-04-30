@@ -25,6 +25,8 @@ local ignore_patterns = {
   "target",
   "*.cs.uid",
   ".godot/",
+  "*.asset",
+  "*.png",
 }
 
 local function generate_ignore_args(tool)
