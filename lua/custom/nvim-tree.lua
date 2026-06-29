@@ -58,6 +58,18 @@ nvimtree.setup({
   filters = {
     custom = { "\\.meta$", "\\.unity$", "^\\.git/*", "\\.anim$", "\\.prefab$", "\\.cs\\.uid$" },
   },
+  filesystem_watchers = {
+    enable = true,
+    debounce_delay = 50,
+    ignore_dirs = {
+      "/node_modules",
+      "/.git",
+      "/Library",
+      "/obj",
+      "/bin",
+      "/Temp",
+    },
+  },
   on_attach = function(bufnr)
     nvimtreeapi.config.mappings.default_on_attach(bufnr)
 
