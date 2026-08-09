@@ -49,7 +49,7 @@ ls.add_snippets(nil, {
       f(function()
         return get_namespace_from_path()
       end),
-      t({ ";", "", "public class " }),
+      t({ ";", "", "public partial class " }),
       f(function(_, parent)
         return get_filename_no_extension(parent)
       end),
