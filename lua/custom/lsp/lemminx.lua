@@ -5,7 +5,7 @@ local cmd
 if vim.fn.has("win32") == 1 then
   cmd = vim.fs.joinpath(base_config.mason_packages, "lemminx/lemminx-win32.exe")
 else
-  cmd = vim.fs.joinpath(base_config.mason_packages, "bin/lemminx")
+  cmd = vim.fs.joinpath(base_config.mason_packages, "lemminx/lemminx-linux")
 end
 
 vim.lsp.config("lemminx", {
