@@ -1,49 +1,51 @@
+local parsers = {
+  "bash",
+  "diff",
+  "html",
+  "lua",
+  "luadoc",
+  "markdown",
+  "markdown_inline",
+  "vim",
+  "vimdoc",
+  "bicep",
+  "dockerfile",
+  "typescript",
+  "javascript",
+  "tsx",
+  "go",
+  "c_sharp",
+  "rust",
+  "python",
+}
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     build = ":TSUpdate",
     lazy = false,
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
     },
-    opts = {
-      ensure_installed = {
-        "bash",
-        "diff",
-        "html",
-        "lua",
-        "luadoc",
-        "markdown",
-        "vim",
-        "vimdoc",
-        "bicep",
-        "dockerfile",
-        "typescript",
-        "javascript",
-        "tsx",
-        "go",
-        "c_sharp",
-        "rust",
-        "python",
-      },
-      highlight = {
-        enable = true,
-        disable = function(_, bufnr)
-          local MAX_FILE_SIZE = 100 * 1024
-          local buf_name = vim.api.nvim_buf_get_name(bufnr)
-          local file_size = vim.api.nvim_call_function("getfsize", { buf_name })
+    config = function()
+      local treesitter = require("nvim-treesitter")
 
-          return file_size > MAX_FILE_SIZE or vim.api.nvim_buf_line_count(bufnr) > 50000
+      treesitter.setup()
+      treesitter.install(parsers)
+
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function(args)
+          local path = vim.api.nvim_buf_get_name(args.buf)
+          local stat = path ~= "" and vim.uv.fs_stat(path)
+
+          if (stat and stat.size > 100 * 1024) or vim.api.nvim_buf_line_count(args.buf) > 50000 then
+            return
+          end
+
+          pcall(vim.treesitter.start, args.buf)
         end,
-      },
-      sync_install = false,
-    },
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
-
-      if vim.fn.has("win32") == 1 then
-        require("nvim-treesitter.install").compilers = { "zig" }
-      end
+      })
     end,
   },
 }
