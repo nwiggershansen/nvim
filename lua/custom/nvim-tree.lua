@@ -56,7 +56,7 @@ nvimtree.setup({
     timeout = 500,
   },
   filters = {
-    custom = { "\\.meta$", "\\.unity$", "^\\.git/*", "\\.anim$", "\\.prefab$", "\\.cs\\.uid$" },
+    custom = { "\\.meta$", "\\.unity$", "^\\.git/*", "\\.anim$", "\\.prefab$", "\\.cs\\.uid$", "\\.gdshader\\.uid$" },
   },
   filesystem_watchers = {
     enable = true,

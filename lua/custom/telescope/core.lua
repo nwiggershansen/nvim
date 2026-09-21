@@ -24,6 +24,7 @@ local ignore_patterns = {
   "package-lock.json",
   "target",
   "*.cs.uid",
+  "*.gdshader.uid",
   ".godot/",
   "*.asset",
   "*.png",
