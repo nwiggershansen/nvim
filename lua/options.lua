@@ -20,7 +20,7 @@ vim.opt.wrap = true
 --
 vim.g.mapleader = " "
 
-vim.opt.updatetime = 100
+vim.opt.updatetime = 300
 vim.opt.termguicolors = true
 
 -- Sets a screen-wide statusline, instead of per buffer
